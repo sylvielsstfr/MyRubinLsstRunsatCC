@@ -34,7 +34,8 @@ echo "init BPS"
 source /pbs/throng/lsst/software/bps-parsl/prod/setup.sh
 
 echo "run BPS"
-bps_submit.sh --interactive bps_dp2cosmos_parsl.yaml
+#bps_submit.sh --interactive bps_dp2cosmos_parsl.yaml
+bps_submit.sh bps_dp2cosmos_parsl.yaml
 
 #bps submit /pbs/home/d/dagoret/rubin_user/lsst_dev/myRunDRPCosmos/bps_dp2cosmos_parsl.yaml \
 #    -b main \
