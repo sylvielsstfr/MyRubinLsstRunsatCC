@@ -1,6 +1,6 @@
 # 
 #    --extra-qgraph-options "--config-file isr:isrLSST.py" \
-export VISITIDS=$(paste -sd, cosmos_selected20261006.txt)
+export VISITIDS=$(paste -sd, exposure_lists/exposures_2025_05.txt)
 export CCDIDS=$(paste -sd, ccdIds.txt)
 
 echo "Init Visits and CCDS"

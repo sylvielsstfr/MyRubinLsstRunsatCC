@@ -65,7 +65,7 @@ payload:
   payloadName: dp2cosmos202610
   butlerConfig: main
   inCollection: LSSTCam/defaults
-  output: u/${USER}/LSSTCam/runcosmos01_20261008_RunCosmosDemo/stage1
+  output: u/${USER}/LSSTCam/runcosmos01_20261011_data202505_RunCosmosDemo/stage1
   dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND detector IN (${CCDIDS}) AND exposure IN (${VISITIDS}) AND visit IN (${VISITIDS})"
   
 numberOfRetries: 3
