@@ -47,7 +47,7 @@ runQuantumCommand: >-
 
 # Specification for running the final job.
 finalJob:
-  whenRun: "SUCCESS"
+  whenRun: "ALWAYS"
   command1: >-
     ${BPS_PARSL_CCIN2P3}/quantum_runner.sh --pipelines {release}
     --
