@@ -47,7 +47,7 @@ runQuantumCommand: >-
 
 # Specification for running the final job.
 finalJob:
-  whenRun: "SUCCESS"
+  whenRun: "ALWAYS"
   command1: >-
     ${BPS_PARSL_CCIN2P3}/quantum_runner.sh --pipelines {release}
     --
@@ -58,14 +58,14 @@ finalJob:
     {fileDistributionEndPoint}{qgraphFile}
     {butlerConfig}
 
-pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam/DRP.yaml#stage1-single-visit"
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam/DRP.yaml#stage2-recalibrate"
 
 payload:
   runInit: true
   payloadName: dp2cosmos202610
   butlerConfig: main
-  inCollection: LSSTCam/defaults
-  output: u/${USER}/LSSTCam/runcosmos01_20261008_RunCosmosDemo/stage1
+  inCollection: u/${USER}/LSSTCam/test02_20261008_RunCosmosDemo/stage1/20261008T151954Z,LSSTCam/defaults
+  output: u/${USER}/LSSTCam/test02_20261008_RunCosmosDemo/stage2
   dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND detector IN (${CCDIDS}) AND exposure IN (${VISITIDS}) AND visit IN (${VISITIDS})"
   
 numberOfRetries: 3
