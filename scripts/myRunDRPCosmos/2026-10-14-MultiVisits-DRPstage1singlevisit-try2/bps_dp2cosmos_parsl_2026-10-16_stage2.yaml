@@ -1,0 +1,86 @@
+includeConfigs:
+# - ${CTRL_BPS_PANDA_DIR}/config/bps_panda_DF.yaml
+# - ${CTRL_BPS_PANDA_DIR}/config/bps_remote.yaml
+- ${DRP_PIPE_DIR}/bps/clustering/LSSTCam/DRP-clustering.yaml
+- ${DRP_PIPE_DIR}/bps/resources/LSSTCam/DRP.yaml
+#- ${DRP_PIPE_DIR}/bps/caching/LSSTCam/frdf/DRP-caching.yaml
+- /pbs/throng/lsst/groups/drp/LSSTCam/DM-54991/DRP-memory.yaml
+- /pbs/throng/lsst/groups/drp/LSSTCam/DM-54991/DRP-caching.yaml
+- /pbs/throng/lsst/groups/drp/LSSTCam/DM-54991/DRP-clustering.yaml
+
+wmsServiceClass: lsst.ctrl.bps.parsl.ParslService
+computeSite: ccin2p3
+
+# Target execution site for this submission.
+site:
+  # CC-IN2P3 Slurm batch farm
+  ccin2p3:
+    # Use the 'class' below if you use release 'w_2024_06' or earlier.
+    class: ccin2p3.Ccin2p3
+    # removed because of the break_point (after talk with Quentin Le Boulc'h 2026-10-08
+    #class: lsst.ctrl.bps.parsl.sites.ccin2p3.Ccin2p3
+    
+
+  # Local host
+  local:
+    class: lsst.ctrl.bps.parsl.sites.Local
+    cores: 16
+
+parsl:
+  # Accepted values: "CRITICAL", "DEBUG", "ERROR", "FATAL", "INFO", "WARN"
+  log_level: INFO
+
+# Release of the LSST Science Pipelines to use for this submission.
+# LSST_VERSION: v30.0.7.rc1
+# release: v30.0.7.rc1
+release: w_2026_40
+
+# Command line specification for running a Quantum.
+runQuantumCommand: >-
+  ${BPS_PARSL_CCIN2P3}/quantum_runner.sh --pipelines {release}
+  --
+  pipetask {runPreCmdOpts} run-qbb
+  --qgraph-node-id {qgraphNodeId}
+  {extraRunQuantumOptions}
+  {butlerConfig}
+  {fileDistributionEndPoint}{qgraphFile}
+
+# Specification for running the final job.
+finalJob:
+  whenRun: "ALWAYS"
+  command1: >-
+    ${BPS_PARSL_CCIN2P3}/quantum_runner.sh --pipelines {release}
+    --
+    butler --long-log --log-level=VERBOSE
+    transfer-from-graph
+    --register-dataset-types
+    --update-output-chain
+    {fileDistributionEndPoint}{qgraphFile}
+    {butlerConfig}
+
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam/DRP.yaml#stage2-recalibrate"
+
+payload:
+  runInit: true
+  payloadName: dp2cosmos202610
+  butlerConfig: main
+  inCollection: u/${USER}/LSSTCam/runcosmos01_20261014_data202505_RunCosmosDemo/stage1,LSSTCam/defaults
+  output: u/${USER}/LSSTCam/runcosmos01_20261014_data202505_RunCosmosDemo/stage2
+  dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND detector IN (${CCDIDS}) AND exposure IN (${VISITIDS}) AND visit IN (${VISITIDS})"
+  
+numberOfRetries: 3
+
+#extraQgraphOptions: "--dataset-query-constraint visit_summary -c parameters:sasquatch_dataset_identifier=LSSTCam/DRP -c parameters:sasquatch_timestamp_version=explicit_timestamp:20260520T073124Z"
+
+pipetask:
+  pipetaskInit:
+    requestMemory: 64_000
+    numberOfRetries: 3
+
+extraRunQuantumOptions: "--no-raise-on-partial-outputs"
+
+enableQnodeMap: true
+
+submitPath: "/sps/lsst/users/${USER}/bps/submit/{outputRun}"
+
+
