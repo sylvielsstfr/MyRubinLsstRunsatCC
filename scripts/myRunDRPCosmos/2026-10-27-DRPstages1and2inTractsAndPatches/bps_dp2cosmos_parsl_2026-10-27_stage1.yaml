@@ -33,7 +33,7 @@ parsl:
 # Release of the LSST Science Pipelines to use for this submission.
 # LSST_VERSION: v30.0.7.rc1
 # release: v30.0.7.rc1
-release: w_2026_40
+release: w_2026_43
 
 # Command line specification for running a Quantum.
 runQuantumCommand: >-
@@ -66,7 +66,7 @@ payload:
   butlerConfig: main
   inCollection: LSSTCam/defaults
   output: u/${USER}/LSSTCam/runcosmos01_20261026_tract9813patch50_RunCosmosDemo/stage1
-  dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND detector IN (${CCDIDS}) AND exposure IN (${VISITIDS}) AND visit IN (${VISITIDS})"
+  dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract=9813 AND patch=50 AND detector IN (${CCDIDS})" 
   
 numberOfRetries: 3
 

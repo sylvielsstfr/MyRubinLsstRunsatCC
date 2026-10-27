@@ -1,6 +1,6 @@
 # README.md 
-- created 2026-10-06 in context of Bifrost workshop context
-- updated : 2026-10-14
+- created 2026-10-27 in context DESC Sprint week  context
+- updated : 2026-10-27
 - 
 - want to run the DRP in COSMOS field from a number of selected visits
 - select the visits only into COSMOS and the the early stage of DP2
@@ -19,9 +19,7 @@
 source /pbs/throng/lsst/software/bps-parsl/prod/setup.sh
 
 ## 2) run bps 
-bps_submit.sh bps_dp2cosmos_parsl.yaml
+sh bps_dp2cosmos_2026-10-27_stage1.sh
 
 
-# Used 2026-10-14
 
-sh bps_dp2cosmos.sh
