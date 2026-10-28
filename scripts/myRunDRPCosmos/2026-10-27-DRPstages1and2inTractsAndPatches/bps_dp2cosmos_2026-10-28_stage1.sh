@@ -38,5 +38,5 @@ echo "run BPS"
 #bps_submit.sh --interactive bps_dp2cosmos_parsl_2026-10-27_stage1.yaml
 
 # No interactive mode for a long run
-bps_submit.sh bps_dp2cosmos_parsl_2026-10-27_stage1.yaml
+bps_submit.sh bps_dp2cosmos_parsl_2026-10-28_stage1.yaml
 
