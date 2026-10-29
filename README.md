@@ -6,7 +6,7 @@ A collection of config files, script to run LSST-pipelines in the context of CCI
 ## Request an account at CCIN2P3
 
 - if member of LSST: see https://doc.cc.in2p3.fr/en/Daily-usage/users.html#request-an-account
-  
+
 
 ## LSST Environnement at CCIN2P3
 
@@ -35,7 +35,7 @@ To access to a butler with Rubin data, one need an accout
 Need three commands
 
 ```bash
-lsstfr register 
+lsstfr register
 lsstfr login
 lsstfr token
 ```
