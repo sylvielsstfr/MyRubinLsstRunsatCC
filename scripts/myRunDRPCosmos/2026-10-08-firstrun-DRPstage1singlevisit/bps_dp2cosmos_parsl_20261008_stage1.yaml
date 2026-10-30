@@ -19,7 +19,7 @@ site:
     class: ccin2p3.Ccin2p3
     # removed because of the break_point (after talk with Quentin Le Boulc'h 2026-10-08
     #class: lsst.ctrl.bps.parsl.sites.ccin2p3.Ccin2p3
-    
+
 
   # Local host
   local:
@@ -67,7 +67,7 @@ payload:
   inCollection: LSSTCam/defaults
   output: u/${USER}/LSSTCam/runcosmos01_20261008_RunCosmosDemo/stage1
   dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND detector IN (${CCDIDS}) AND exposure IN (${VISITIDS}) AND visit IN (${VISITIDS})"
-  
+
 numberOfRetries: 3
 
 #extraQgraphOptions: "--dataset-query-constraint visit_summary -c parameters:sasquatch_dataset_identifier=LSSTCam/DRP -c parameters:sasquatch_timestamp_version=explicit_timestamp:20260520T073124Z"
@@ -82,5 +82,3 @@ extraRunQuantumOptions: "--no-raise-on-partial-outputs"
 enableQnodeMap: true
 
 submitPath: "/sps/lsst/users/${USER}/bps/submit/{outputRun}"
-
-
