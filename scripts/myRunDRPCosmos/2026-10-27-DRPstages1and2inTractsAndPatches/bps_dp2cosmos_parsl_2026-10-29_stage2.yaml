@@ -19,7 +19,7 @@ site:
     class: ccin2p3.Ccin2p3
     # removed because of the break_point (after talk with Quentin Le Boulc'h 2026-10-08
     #class: lsst.ctrl.bps.parsl.sites.ccin2p3.Ccin2p3
-    
+
 
   # Local host
   local:
@@ -64,10 +64,12 @@ payload:
   runInit: true
   payloadName: dp2cosmos202610
   butlerConfig: main
-  inCollection: u/${USER}/LSSTCam/runcosmos03_20261028_tract9813patch50_RunCosmosDemo/stage1,LSSTCam/defaults
-  output: u/${USER}/LSSTCam/runcosmos03_20261028_tract9813patch50_RunCosmosDemo/stage2
-  dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract=9813 AND patch=50 AND detector IN (${CCDIDS})" 
-  
+  #inCollection: u/${USER}/LSSTCam/runcosmos03_20261028_tract9813patch50_RunCosmosDemo/stage1,LSSTCam/defaults
+  inCollection: u/${USER}/LSSTCam/runcosmos01_20261026_tract9813patch50_RunCosmosDemo/stage1,LSSTCam/defaults
+  #output: u/${USER}/LSSTCam/runcosmos03_20261028_tract9813patch50_RunCosmosDemo/stage2
+  output: u/${USER}/LSSTCam/runcosmos01_20261026_tract9813patch50_RunCosmosDemo/stage2
+  dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract=9813 AND patch=50 AND detector IN (${CCDIDS})"
+
 numberOfRetries: 3
 
 #extraQgraphOptions: "--dataset-query-constraint visit_summary -c parameters:sasquatch_dataset_identifier=LSSTCam/DRP -c parameters:sasquatch_timestamp_version=explicit_timestamp:20260520T073124Z"
@@ -82,5 +84,3 @@ extraRunQuantumOptions: "--no-raise-on-partial-outputs"
 enableQnodeMap: true
 
 submitPath: "/sps/lsst/users/${USER}/bps/submit/{outputRun}"
-
-

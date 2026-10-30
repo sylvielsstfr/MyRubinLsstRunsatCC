@@ -1,4 +1,4 @@
-# 
+#
 #    --extra-qgraph-options "--config-file isr:isrLSST.py" \
 export VISITIDS=$(paste -sd, exposure_lists/exposures_2025_05.txt)
 export CCDIDS=$(paste -sd, ccdIds.txt)
@@ -18,11 +18,11 @@ case "$ARCH" in
     x86_64)
         source /cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/${release}/loadLSST.sh
         ;;
-        
+
     aarch64)
         source /cvmfs/sw.lsst.eu/almalinux-aarch64/lsst_distrib/${release}/loadLSST.sh
         ;;
-        
+
     *)
         echo "Architecture non supportée : $ARCH"
         exit 1
