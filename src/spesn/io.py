@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 
-DP1_COLLECTION = "LSSTComCam/DP1"
+DP2_COLLECTION = "LSSTCam/DP2"
 MONSTER_DATASET = "the_monster_20250219"
 
 
@@ -28,7 +28,7 @@ class SaturationConfig:
     monster_flux_col: str = "monster_ComCam_g_flux"
 
 
-def get_butler(repo: str = "dp1", collections: str = DP1_COLLECTION) -> Any:
+def get_butler(repo: str = "dp2", collections: str = DP2_COLLECTION) -> Any:
     """Return an LSST Butler instance."""
     import lsst.daf.butler as dafButler
 
@@ -53,7 +53,7 @@ def fetch_source_table_for_visit_detector(
     min_snr: float | None = 3.0,
     tap_service: Any | None = None,
 ) -> pd.DataFrame:
-    """Fetch DP1 source rows for a visit+detector pair from ``dp1.Source``."""
+    """Fetch DP2 source rows for a visit+detector pair from ``dp2.Source``."""
     service = tap_service or get_tap_service("tap")
 
     where_parts = [f"visit = {int(visit)}", f"detector = {int(detector)}"]
@@ -65,7 +65,7 @@ def fetch_source_table_for_visit_detector(
 
     query = (
         "SELECT sourceId, visit, detector, band, ra, dec, psfFlux, psfFluxErr "
-        "FROM dp1.Source "
+        "FROM dp2.Source "
         f"WHERE {where_clause}"
     )
 
@@ -160,7 +160,11 @@ def add_saturation_metrics(
     source_flux_err_col: str = "psfFluxErr",
     monster_flux_col: str = "monster_ComCam_g_flux",
 ) -> pd.DataFrame:
-    """Add magnitude and pull diagnostics for saturation checks."""
+    """
+    Add magnitude and pull diagnostics for saturation checks.
+
+
+    """
     out = _as_pandas(matched).copy()
 
     src_flux = _to_njy_array(out[source_flux_col])
