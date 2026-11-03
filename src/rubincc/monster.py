@@ -209,6 +209,19 @@ def _table_to_pandas(tab: Any) -> pd.DataFrame:
         return tab[scalar].to_pandas()
 
 
+def as_dataframe(obj: Any) -> pd.DataFrame:
+    """Convert a Butler product (DataFrame, astropy Table, ArrowAstropy, ...) to a DataFrame."""
+    if isinstance(obj, pd.DataFrame):
+        return obj
+    if hasattr(obj, "asAstropy"):
+        obj = obj.asAstropy()
+    if hasattr(obj, "colnames"):
+        return _table_to_pandas(obj)
+    if hasattr(obj, "to_pandas"):
+        return obj.to_pandas()
+    raise TypeError(f"Cannot convert object of type {type(obj)} to a DataFrame")
+
+
 # ----------------------------------------------------------------------------
 # Column discovery and photometric helpers
 # ----------------------------------------------------------------------------
