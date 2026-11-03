@@ -33,7 +33,7 @@ parsl:
 # Release of the LSST Science Pipelines to use for this submission.
 # LSST_VERSION: v30.0.7.rc1
 # release: v30.0.7.rc1
-release: ${LSST_RELEASE}
+release: w_2026_43
 
 # Command line specification for running a Quantum.
 runQuantumCommand: >-
