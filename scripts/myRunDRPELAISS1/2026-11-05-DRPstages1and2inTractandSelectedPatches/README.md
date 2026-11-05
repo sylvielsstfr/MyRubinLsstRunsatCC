@@ -15,4 +15,4 @@
 source /pbs/throng/lsst/software/bps-parsl/prod/setup.sh
 
 ## 2) run bps
-bps_dp2cosmos_2026-11-05_stage1.sh
+bps_dp2elaiss1_2026-11-05_stage1.sh
