@@ -4,9 +4,9 @@ includeConfigs:
 - ${DRP_PIPE_DIR}/bps/clustering/LSSTCam/DRP-clustering.yaml
 - ${DRP_PIPE_DIR}/bps/resources/LSSTCam/DRP.yaml
 #- ${DRP_PIPE_DIR}/bps/caching/LSSTCam/frdf/DRP-caching.yaml
-- /pbs/throng/lsst/groups/drp/LSSTCam/DM-54991/DRP-memory.yaml
+#- /pbs/throng/lsst/groups/drp/LSSTCam/DM-54991/DRP-memory.yaml
 - /pbs/throng/lsst/groups/drp/LSSTCam/DM-54991/DRP-caching.yaml
-- /pbs/throng/lsst/groups/drp/LSSTCam/DM-54991/DRP-clustering.yaml
+#- /pbs/throng/lsst/groups/drp/LSSTCam/DM-54991/DRP-clustering.yaml
 
 wmsServiceClass: lsst.ctrl.bps.parsl.ParslService
 computeSite: ccin2p3
@@ -64,10 +64,10 @@ pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam/DRP.yaml#stage1-single-visit"
 
 payload:
   runInit: true
-  payloadName: dp2cosmos202611
+  payloadName: dp2elaiss1202611
   butlerConfig: main
   inCollection: LSSTCam/defaults
-  output: u/${USER}/LSSTCam/runcosmos01_20261103_tract9813patchsel_RunCosmos9patches/stage1
+  output: u/${USER}/LSSTCam/runelaiss1_20261106_tract2877patchsel_RunCosmos9patches/stage1
   dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract IN (${TRACTIDS})  AND patch IN (${PATCHIDS}) AND detector IN (${CCDIDS}) AND exposure.observation_type='science'"
 
 numberOfRetries: 3
