@@ -21,7 +21,9 @@ echo "init rubin-lsst setup"
 
 #define the release
 release="w_2026_43"
-export LSST_RELEASE=${release}
+export LSSTRELEASE=${release}
+echo "LSST_RELEASE : ${LSSTRELEASE}"
+
 
 ARCH=$(uname -m)
 case "$ARCH" in
