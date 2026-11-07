@@ -37,6 +37,8 @@ parser.add_argument('--task-label', default='fgcmBuildFromIsolatedStar')
 parser.add_argument('--stride', type=int, default=1, help='use one dataset out of STRIDE')
 parser.add_argument('--all-runs', action='store_true',
                     help='replay the datasets of every stage-1 run, not only the first found in the chain')
+parser.add_argument('--debug-visit', type=int, default=0,
+                    help='print every intermediate step of the psfSigma computation for this visit, then exit')
 args = parser.parse_args()
 
 user = os.getenv('USER')
@@ -72,6 +74,28 @@ for run, n in Counter(ref.run for ref in refs).items():
     print(f'   {n:6d} in {run}')
 per_visit = Counter(int(ref.dataId['visit']) for ref in refs)
 print('visits with more than one dataset:', sum(1 for n in per_visit.values() if n > 1), 'of', len(per_visit))
+if args.debug_visit:
+    ref = next(r for r in refs if int(r.dataId['visit']) == args.debug_visit)
+    summary = butler.getDeferred(ref).get()
+    print('summary type:', type(summary), 'rows:', len(summary))
+    print('detector ids:', np.asarray(summary['id']))
+    psf_sigmas = summary['psfSigma']
+    print('psfSigma column:', type(psf_sigmas), psf_sigmas.dtype, psf_sigmas.shape,
+          'c_contiguous', psf_sigmas.flags.c_contiguous, 'strides', psf_sigmas.strides, psf_sigmas)
+    pixel_scales = summary['pixelScale']
+    print('pixelScale column:', type(pixel_scales), pixel_scales.dtype, pixel_scales.shape, pixel_scales)
+    good_sigma = (np.nan_to_num(psf_sigmas) > 0) & (np.nan_to_num(pixel_scales) > 0)
+    print('goodSigma:', type(good_sigma), good_sigma.dtype, good_sigma.shape, 'size', good_sigma.size, good_sigma)
+    selected = psf_sigmas[good_sigma]
+    print('psfSigma[goodSigma]:', type(selected), selected.shape, selected)
+    first = selected[0]
+    print('psfSigma[goodSigma][0]:', type(first), np.shape(first), first)
+    try:
+        print('.item() ->', first.item())
+    except Exception as exc:
+        print('.item() FAILS:', type(exc).__name__, exc)
+    sys.exit(0)
+
 refs = refs[::args.stride]
 
 try:
