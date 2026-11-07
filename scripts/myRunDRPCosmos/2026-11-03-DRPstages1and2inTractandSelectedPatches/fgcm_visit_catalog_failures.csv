@@ -1,0 +1,3 @@
+use_science,visit,run,error
+False,2026040400105,u/dagoret/LSSTCam/runcosmos01_20261103_tract9813patchsel_RunCosmos9patches/stage1/20261105T102248Z,"ValueError: can only convert an array of size 1 to a Python scalar"
+True,2026040400105,u/dagoret/LSSTCam/runcosmos01_20261103_tract9813patchsel_RunCosmos9patches/stage1/20261105T102248Z,"ValueError: can only convert an array of size 1 to a Python scalar"
