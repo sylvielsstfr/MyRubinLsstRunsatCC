@@ -66,7 +66,7 @@ payload:
   butlerConfig: main
   inCollection: u/${USER}/LSSTCam/runcosmos01_20261103_tract9813patchsel_RunCosmos9patches/stage1,LSSTCam/defaults
   output: u/${USER}/LSSTCam/runcosmos01_20261103_tract9813patchsel_RunCosmos9patches/stage2
-  dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract IN (${TRACTIDS})  AND patch IN (${PATCHIDS}) AND detector IN (${CCDIDS}) AND exposure.observation_type='science'"
+  dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract IN (${TRACTIDS})  AND patch IN (${PATCHIDS}) AND detector IN (${CCDIDS}) AND exposure NOT IN (2026040400105) AND exposure.observation_type='science'"
 
 numberOfRetries: 3
 
