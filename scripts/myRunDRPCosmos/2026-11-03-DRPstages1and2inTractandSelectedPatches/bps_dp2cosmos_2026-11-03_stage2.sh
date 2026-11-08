@@ -5,6 +5,10 @@
 export PATCHIDS=$(paste -sd, patchIds.txt)
 export TRACTIDS=$(paste -sd, tractIds.txt)
 export CCDIDS=$(paste -sd, ccdIds.txt)
+export NOVISITS=$(paste -sd, visits_to_exclude.txt)
+
+echo "Init EXPOSURES EXCLUDED"
+echo $NOVISITS
 
 echo "Init CCDS"
 echo $CCDIDS
