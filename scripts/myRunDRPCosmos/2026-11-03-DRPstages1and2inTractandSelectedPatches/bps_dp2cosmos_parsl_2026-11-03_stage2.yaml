@@ -72,6 +72,10 @@ numberOfRetries: 3
 
 #extraQgraphOptions: "--dataset-query-constraint visit_summary -c parameters:sasquatch_dataset_identifier=LSSTCam/DRP -c parameters:sasquatch_timestamp_version=explicit_timestamp:20260520T073124Z"
 
+# fgcmFitCycle stopped with "All observations in %s band have been cut": in the u band 202 of 206 visits have
+# TOO_FEW_STARS and 4 have NO_STARS with the pipeline default minStarPerExp=500 (small footprint, few stars per visit)
+extraQgraphOptions: "-c fgcmFitCycle:minStarPerExp=100"
+
 pipetask:
   pipetaskInit:
     requestMemory: 64_000
