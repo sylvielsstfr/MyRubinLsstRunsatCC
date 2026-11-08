@@ -1,6 +1,6 @@
 # README.md
 - created 2026-11-03 : prepare LSST-France
-- updated : 2026-11-03
+- updated : 2026-11-08
 -
 - want to run the DRP in COSMOS field from a number of selected visits
 - select the visits only into COSMOS and the the early stage of DP2
@@ -18,8 +18,37 @@ source /pbs/throng/lsst/software/bps-parsl/prod/setup.sh
 bps_dp2cosmos_2026-11-03_stage1.sh
 
 
+## History
+  ### 2026-11-07 :
+  correct stage2 failure inside fgcmBuildFromIsolatedStarsTask due to
+  a single bad visit  (2026040400105) identified in check_fgcm_visit_catalog.py (see also notebooks/DEBUG_stage2_DiagnoseFgcmVisitCatalog.ipynb).
+  The notebook DEBUG_stage2_DiagnoseFgcmVisitCatalog.ipynb also identifies 10 bad visits without PSF. Exclude the bad visit  (2026040400105) from the dataQuery.
 
-e finalise : j’ai relu ton yaml de stage 2 et créé un script qui rejoue le vrai code fgcmcal dans l’environnement du job.
+
+  - inCollection: u/${USER}/LSSTCam/runcosmos01_20261103_tract9813patchsel_RunCosmos9patches/stage1,LSSTCam/defaults
+  - output: u/${USER}/LSSTCam/runcosmos01_20261103_tract9813patchsel_RunCosmos9patches/stage2
+  dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract IN (${TRACTIDS})  AND patch IN (${PATCHIDS}) AND detector IN (${CCDIDS}) AND exposure NOT IN (2026040400105) AND exposure.observation_type='science'"
+
+  sh bps_dp2cosmos_2026-11-03_stage2.sh
+  log : slurm_bps_submit_63005758.log
+
+### 2026-11-08 :
+    Found an error in task fgcmFitCycle : the task fgcmFitCycle fails in a visit in band u that has not enough sources : thus must reduce the number of minimal stars per exposure to 100 (default is 200) in the fgcmFitCycle task. This is done by adding the following line in the bps_dp2cosmos_parsl_2026-11-03_stage2.yaml file :
+
+  extraQgraphOptions: "-c fgcmFitCycle:minStarPerExp=100"
+
+ - inCollection: u/${USER}/LSSTCam/runcosmos01_20261103_tract9813patchsel_RunCosmos9patches/stage1,LSSTCam/defaults
+  - output: u/${USER}/LSSTCam/runcosmos01_20261103_tract9813patchsel_RunCosmos9patches/stage2_v2
+  dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract IN (${TRACTIDS})  AND patch IN (${PATCHIDS}) AND detector IN (${CCDIDS}) AND exposure NOT IN (${NOVISITS}) AND exposure.observation_type='science'"
+
+   sh bps_dp2cosmos_2026-11-03_stage2.sh
+   slurm_bps_submit_63020986.log
+
+
+
+
+### Notes de discussion avec Claude IA
+Je finalise : j’ai relu ton yaml de stage 2 et créé un script qui rejoue le vrai code fgcmcal dans l’environnement du job.
 
 Ton test confirme que les 10 visites sans PSF ne suffisent pas. Dans le kernel w_2026_45, la médiane d’un tableau vide donne un NaN float32 de taille 1, et .item() retourne nan sans erreur. Une visite tout-NaN donne donc seulement un psfSigma NaN silencieux, pas le ValueError.
 
