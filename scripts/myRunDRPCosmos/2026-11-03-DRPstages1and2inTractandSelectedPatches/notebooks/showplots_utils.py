@@ -75,19 +75,27 @@ class PlotBrowser:
     Parameters
     ----------
     butler : lsst.daf.butler.Butler
-    collection : str
-        Collection (e.g. the stage1 or stage2 output) containing the plots.
+    collection : str or list of str
+        Collection (e.g. the stage1 output) or list of collections (e.g. the RUN collections written by
+        stage 2) containing the plots.
     raw_dir : str or Path
         Directory where the plot files are retrieved.
     montage_dir : str or Path, optional
         Directory where the montages are saved (default: raw_dir/montages).
     dataset_type_glob : str
         Glob selecting the plot dataset types.
+    find_first : bool
+        True : one dataset per dataId (the first one found in the collection order, i.e. the latest run).
+    strip_prefix : bool
+        True : the common prefix of the dataset type names is removed from the 'short' names.
+        False : the 'short' names are the full dataset type names.
     """
 
-    def __init__(self, butler, collection, raw_dir, montage_dir=None, dataset_type_glob='*Plot'):
+    def __init__(self, butler, collection, raw_dir, montage_dir=None, dataset_type_glob='*Plot',
+                 find_first=False, strip_prefix=True):
         self.butler = butler
         self.collection = collection
+        self.find_first = find_first
         self.raw_dir = Path(raw_dir)
         self.montage_dir = Path(montage_dir) if montage_dir else self.raw_dir / 'montages'
         self.raw_dir.mkdir(parents=True, exist_ok=True)
@@ -97,14 +105,14 @@ class PlotBrowser:
             butler.registry.queryDatasets(
                 datasetType=dataset_type_glob,
                 collections=collection,
-                findFirst=False,
+                findFirst=find_first,
             )
         )
 
         # Common prefix of the dataset type names (cut after an underscore), removed in 'short'
         names = sorted({r.datasetType.name for r in refs})
         prefix = os.path.commonprefix(names)
-        self.prefix = prefix[:prefix.rfind('_') + 1]
+        self.prefix = prefix[:prefix.rfind('_') + 1] if strip_prefix else ''
 
         columns = ['short', 'datasetType', *FACET_PRIORITY, 'ref']
         rows = []
@@ -260,9 +268,13 @@ class PlotBrowser:
     # ------------------------------------------------- other datasets (metrics)
     def dataset_types(self):
         """Names of all the dataset types of the collection (from the collection summary)."""
+        collections = [self.collection] if isinstance(self.collection, str) else list(self.collection)
         try:
-            info = self.butler.collections.get_info(self.collection, include_summary=True)
-            return sorted(info.dataset_types)
+            names = set()
+            for collection in collections:
+                info = self.butler.collections.get_info(collection, include_summary=True)
+                names.update(info.dataset_types)
+            return sorted(names)
         except Exception as exc:
             print('Collection summary not available :', exc)
             return []
@@ -276,7 +288,7 @@ class PlotBrowser:
         """Read the first dataset of a given type in the collection (None if there is none)."""
         refs = list(
             self.butler.registry.queryDatasets(
-                datasetType=dataset_type, collections=self.collection, findFirst=False
+                datasetType=dataset_type, collections=self.collection, findFirst=self.find_first
             )
         )
         print(f'{len(refs)} dataset(s) of type {dataset_type}')
