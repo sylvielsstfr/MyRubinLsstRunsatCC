@@ -2,7 +2,7 @@
 #
 #    --extra-qgraph-options "--config-file isr:isrLSST.py" \
 export CCDIDS=$(paste -sd, ccdIds.txt)
-export PATCHIDS=$(paste -sd, patchIds_smallarray.txt)
+export PATCHIDS=$(paste -sd, patchIds_mediumarray.txt)
 export TRACTIDS=$(paste -sd, tractIds.txt)
 
 echo "Prepare to run rubin-lsst stage1 pipeline on some tract and patches belonging to DDF ELAIS S1"

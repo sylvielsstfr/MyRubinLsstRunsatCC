@@ -64,8 +64,8 @@ payload:
   runInit: true
   payloadName: dp2elaiss1202611
   butlerConfig: main
-  inCollection: u/${USER}/LSSTCam/runelaiss1_20261111_tract2877patchsel_RunCosmos9patches/stage1,LSSTCam/defaults
-  output: u/${USER}/LSSTCam/runelaiss1_20261111_tract2877patchsel_RunCosmos9patches/stage2
+  inCollection: u/${USER}/LSSTCam/runelaiss1_20261111_tract2877patchsel_mediumpatcharray/stage1,LSSTCam/defaults
+  output: u/${USER}/LSSTCam/runelaiss1_20261111_tract2877patchsel_mediumpatcharray/stage2
   dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract IN (${TRACTIDS})  AND patch IN (${PATCHIDS}) AND detector IN (${CCDIDS}) AND exposure.observation_type='science'"
 
 numberOfRetries: 3
