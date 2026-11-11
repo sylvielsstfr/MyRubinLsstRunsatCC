@@ -52,4 +52,4 @@ source /pbs/throng/lsst/software/bps-parsl/prod/setup.sh
 
 # No interactive mode for a long run
 echo "run BPS"
-bps_submit.sh bps_dp2elaiss1_parsl_2026-11-05_stage1.yaml
+bps_submit.sh bps_dp2elaiss1_parsl_2026-11-11_stage1.yaml
