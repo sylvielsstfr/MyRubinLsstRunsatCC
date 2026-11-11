@@ -78,6 +78,12 @@ Directories created when running (not to be committed) :
 - Spectral resolution : ~1 nm for the emulator against 0.5 nm for the table of fgcm : narrow lines (O2 A-band, H2O
   near 940 nm) are smoothed. Agreement with the MODTRAN table is ~1 % in median and 2-3 % rms, concentrated in these bands.
 - The time of `FgcmMakeLutTask` with per-detector transmissions is unknown.
+- `pipetask qgraph` with the data query of the bps scripts (with `patch` and `detector`) failed at CC-IN2P3 with
+  `temp_file_limit exceeded` (postgres). The three tasks only have dimensions `{instrument}`, so the notebook uses
+  `QUERY_MODE = 'minimal'` by default (instrument, skymap, tract, `visit NOT IN (...)`). `QUERY_MODE = 'bps'` restores
+  the original query, and `QGRAPH_EXTRA_OPTIONS = ['--dataset-query-constraint', 'preliminary_visit_summary']` is the next
+  thing to try if the query is still too heavy. The kernel (`w_2026_45`) is also not the release of the bps jobs
+  (`w_2026_43`).
 - Tested so far : the table builder and its read-back by fgcm (outside the lsst stack). Not tested : the notebook,
   the shell script and the LUT run on Butler.
 
