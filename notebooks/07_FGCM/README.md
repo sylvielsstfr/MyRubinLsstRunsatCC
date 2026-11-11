@@ -28,6 +28,7 @@ The *checks of the bps runs* (did the submitted jobs behave ?) are **not** here 
 | file | what it does |
 |---|---|
 | `01_runfgcmFitCyle.ipynb` | Replays step 2a from the stage1 collection of the COSMOS run. Reads the pipeline connections and configs, inventories the inputs (stage1 + `LSSTCam/defaults`), shows the `fgcmLookUpTable`, builds (and optionally runs) `pipetask qgraph` / `pipetask run`, then displays the outputs : star observations per visit and the `fgcmFitCycle` cuts, fit parameters, zero points, and the comparison with the bps run `stage2_v2`. |
+| `02_injectAtmosphere.ipynb` | Final-cycle test of an injected atmosphere : shows the fitted nightly atmosphere of `stage2_v2`, converts measurements (AuxTel table) into fgcm nightly parameters, writes an edited `fgcm_Cycle{K-1}_FitParameters`, runs `fgcmFitCycle` + `fgcmOutputProducts` as a single final cycle, and compares the zero points with `stage2_v2`. Modes `null` (must reproduce `stage2_v2`), `closure` (checks the conversion) and `aux`. Not executed yet. |
 | `make_fgcm_lut_obsatmo.sh` | Builds the fgcm atmosphere table from getObsAtmo, then runs `FgcmMakeLutTask` (`fgcmMakeLUT.yaml`) to produce a new `fgcmLookUpTable` in the collection `u/${USER}/LSSTCam/fgcm_lut_<TAG>`. |
 | `../../src/make_fgcm_atm_table_from_obsatmo.py` | Called by the shell script. Evaluates getObsAtmo on the fgcm grids and writes the FITS atmosphere table (same layout as `fgcm_atm_lsst2.fits`). With `--check --reference <table>` it reads the table back with fgcm, compares with the emulator and with the shipped MODTRAN table, and makes a comparison figure. |
 
@@ -50,7 +51,7 @@ Directories created when running (not to be committed) :
 3. **Replay with the new table.** In the notebook set `LUT_COLLECTION = f'u/{username}/LSSTCam/fgcm_lut_obsatmo01'`
    (it is chained before `LSSTCam/defaults`) and rerun. The output collection gets the suffix `_newlut`.
    The difference of zero points with the first replay is the effect of MODTRAN -> libRadtran alone.
-4. **Freeze the atmosphere** (not written yet, see below).
+4. **Apply an injected atmosphere in a final cycle** with `02_injectAtmosphere.ipynb` (diagnostic, no refit of the instrument).
 
 ## What was learned from the fgcm / fgcmcal code
 
@@ -65,9 +66,14 @@ Directories created when running (not to be committed) :
   `fgcm_standard_passband` and `standard_passband`.
 - The atmosphere is fitted **per night** : `parO3`, `parAlpha`, `parLnTauIntercept/Slope`,
   `parLnPwvIntercept/Slope/Quadratic`. `freezeStdAtmosphere=True` sets their bounds equal to their *current value*,
-  so editing a `FitParameters` catalog before a cycle and freezing should keep the injected values (to be tested).
+  but in a non-final cycle `FgcmFitCycle` first calls `resetAtmosphereParameters()`, which overwrites them with the
+  *standard* values (`resetFitParameters` is hard coded to `True` in `FgcmFitCycleTask`) : **editing a `FitParameters`
+  catalog and freezing does not keep injected values in a normal cycle**. (A first version of notebook 01 said the
+  opposite : corrected.) Only the final cycle (`isFinalCycle=True`, `maxIter=0`, no reset) uses the catalog as it is.
+- Per night, `ln PWV = a + b dUT + c dUT^2`, `ln tau = a + b dUT`, `O3` and `alpha` constant (`dUT` in days since the
+  night boundary), so a per-visit PWV can be represented by a nightly quadratic.
 - `fgcmcal` does not pass the fgcm `pwvFile` option (external PWV), and `externalTau` is not implemented in fgcm.
-  A per-visit PWV cannot be injected with this mechanism : the parameters are nightly.
+  The closest representation of a per-visit PWV is the nightly quadratic above (approximate if a night has few visits).
 
 ## Known limits and choices to confirm
 
@@ -89,6 +95,6 @@ Directories created when running (not to be committed) :
 
 ## Next steps
 
-- Notebook `02_` : single-cycle run (`doMultipleCycles=False`, `cycleNumber>0`) with an edited `FitParameters`
-  catalog containing the AuxTel values and `freezeStdAtmosphere=True`.
+- Fit the instrument alone with a frozen external atmosphere : needs `resetAtmosphereParameters` to be replaced (subclass
+  of `FgcmFitCycleTask` in an importable module and a pipeline yaml pointing to it) : not written, see section 8 of notebook 02.
 - Compare AuxTel and fgcm atmospheric parameters night by night.
