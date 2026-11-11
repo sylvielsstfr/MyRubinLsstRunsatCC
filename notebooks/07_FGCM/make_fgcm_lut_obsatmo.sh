@@ -15,8 +15,9 @@
 set -euo pipefail
 
 TAG=${1:-obsatmo01}
-SRC=/Users/dagoret/Desktop/MyRubinLsstRunsatCC/src      # adapt to the location of the package at CC-IN2P3
-OUTDIR=$(pwd)/fgcm_atm_${TAG}
+HERE=$(cd "$(dirname "$0")" && pwd)                     # notebooks/07_FGCM
+SRC=$(cd "${HERE}/../../src" && pwd)                    # MyRubinLsstRunsatCC/src
+OUTDIR=${HERE}/data_fgcm_atm_${TAG}
 TABLE=${OUTDIR}/fgcm_atm_lsst_${TAG}.fits               # absolute path : read by FgcmMakeLutTask
 REFERENCE_TABLE=${FGCM_DIR:-}/fgcm/data/tables/fgcm_atm_lsst2.fits   # optional, for the comparison figure
 LUT_COLLECTION=u/${USER}/LSSTCam/fgcm_lut_${TAG}
