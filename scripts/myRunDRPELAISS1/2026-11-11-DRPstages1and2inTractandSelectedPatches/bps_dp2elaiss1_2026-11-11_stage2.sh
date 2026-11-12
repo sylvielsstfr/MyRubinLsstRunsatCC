@@ -48,7 +48,13 @@ case "$ARCH" in
         exit 1
         ;;
 esac
+
 setup lsst_distrib
+
+# define my own version of FGCM and check
+setup -k -r /pbs/home/d/dagoret/rubin_user/REPO/fgcmcal
+eups list -s | grep LOCAL
+
 
 echo "init BPS"
 source /pbs/throng/lsst/software/bps-parsl/prod/setup.sh

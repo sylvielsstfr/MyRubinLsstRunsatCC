@@ -18,14 +18,13 @@ Collections used (prefix `u/${USER}/LSSTCam/runcosmos01_20261103_tract9813patchs
 
 | file | what it does |
 |---|---|
-| `nb2026-11-05_CheckCollections_DRPstage1-single-visit.ipynb` | Lists the datasets of the `stage1` collection and looks at their content. |
-| `nb2026-11-05_CheckCollections_DRPstage2-recalibrate.ipynb` | Same for the inputs and outputs of the stage 2 (`stage2-recalibrate`), including the `fgcm_*` datasets. |
-| `nb2026-11-05_CheckCollections_DRPstage2-recalibrate_v2.ipynb` | Second version of the previous notebook, for the `stage2_v2` run. |
-| `nb2026-11-06_ComparePostISRvsPreliminaryImage_DRPstage1-step1a.ipynb` | Compares the post-ISR image with the preliminary image of step 1a. |
-| `nb2026-11-06_ShowPlots_DRPstage1-single-visit.ipynb` | Displays the `lsst.analysis.tools` plots (`*Plot` datasets) of the stage 1. |
-| `nb2026-11-06_ShowPlots_DRPstage2-recalibrate.ipynb` | Same for the stage 2. |
+| `nb2026-11-11_CheckCollections_DRPstage1-single-visit.ipynb` | Lists the datasets of the `stage1` collection and looks at their content. |
+| `nb2026-11-12_CheckCollections_DRPstage2-recalibrate.ipynb` | Same for the inputs and outputs of the stage 2 (`stage2-recalibrate`), including the `fgcm_*` datasets. |
+| `nb2026-11-11_ComparePostISRvsPreliminaryImage_DRPstage1-step1a.ipynb` | Compares the post-ISR image with the preliminary image of step 1a. |
+| `nb2026-11-11_ShowPlots_DRPstage1-single-visit.ipynb` | Displays the `lsst.analysis.tools` plots (`*Plot` datasets) of the stage 1. |
+| `nb2026-11-12_ShowPlots_DRPstage2-recalibrate.ipynb` | Same for the stage 2. |
 | `showplots_utils.py` | Helper functions imported by the two `ShowPlots` notebooks. |
-| `DEBUG_stage2_DiagnoseFgcmVisitCatalog.ipynb` | Diagnosis of the failure of `fgcmBuildFromIsolatedStar` : identifies the bad visit `2026040400105` and the 10 visits without PSF (see `../README.md`, History 2026-11-07). |
+| `DEBUG_stage2_DiagnoseFgcmVisitCatalog.ipynb` | Diagnosis of the failure of `fgcmBuildFromIsolatedStar` : identifies the bad visit  and the 10 visits without PSF (see `../README.md`, History 2026-11-07). |
 
 `.ipynb_checkpoints/` is created by Jupyter : it should not be committed.
 
