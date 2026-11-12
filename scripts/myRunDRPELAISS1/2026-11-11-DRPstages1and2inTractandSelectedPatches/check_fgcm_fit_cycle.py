@@ -94,6 +94,8 @@ for name in ('bands', 'fitBands', 'expFwhmCutDict', 'expGrayPhotometricCutDict',
     value = getattr(config, name, 'n/a')
     print(f'   {name:34s}', dict(value) if hasattr(value, 'items') else value)
 min_star = args.min_star_per_exp if args.min_star_per_exp is not None else int(config.minStarPerExp)
+# extraQgraphOptions: "-c fgcmFitCycle:minStarPerExp=100"
+min_star = 100
 fwhm_cut = dict(getattr(config, 'expFwhmCutDict', {}) or {})
 print('minStarPerExp used here:', min_star)
 
