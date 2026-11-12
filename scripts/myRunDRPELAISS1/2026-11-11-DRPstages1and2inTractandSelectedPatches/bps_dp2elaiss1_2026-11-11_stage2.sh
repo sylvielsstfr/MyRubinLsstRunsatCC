@@ -6,7 +6,7 @@ export PATCHIDS=$(paste -sd, patchIds_mediumarray.txt)
 export TRACTIDS=$(paste -sd, tractIds.txt)
 export NOVISITS=$(paste -sd, visits_to_exclude.txt)
 
-echo "Prepare to run RUBIN-LSST STAGE2 pipeline on some tract and patches belonging to DDF ELAIS S1"
+echo "*** Prepare to run RUBIN-LSST STAGE2 pipeline on some tract and patches belonging to DDF ELAIS S1 ***"
 
 echo "Init EXPOSURES EXCLUDED"
 echo $NOVISITS
@@ -30,8 +30,6 @@ echo "init rubin-lsst setup"
 release="w_2026_43"
 export LSST_RELEASE=${release}
 echo "LSST_RELEASE : ${LSST_RELEASE}"
-
-exit 0
 
 #launch LSST libs
 
