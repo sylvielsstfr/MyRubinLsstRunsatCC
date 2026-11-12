@@ -1,0 +1,464 @@
+--> executable follows <--
+${BPS_PARSL_CCIN2P3}/quantum_runner.sh --pipelines w_2026_43 -- pipetask --long-log --log-level=VERBOSE run-qbb --qgraph-node-id 01a1cf75-1965-74e9-9200-c26ec69efcda -j 1 -n 60 main /sps/lsst/users/dagoret/bps/submit/u/dagoret/LSSTCam/runelaiss1_20261111_tract2877patchsel_mediumpatcharray/stage2_v2/20261112T110933Z/u_dagoret_LSSTCam_runelaiss1_20261111_tract2877patchsel_mediumpatcharray_stage2_v2_20261112T110933Z.qg
+--> end executable <--
+2026-11-12T12:17:39+01:00 quantum_runner.sh: quantum runner: /pbs/throng/lsst/software/bps-parsl/prod/quantum_runner.sh
+2026-11-12T12:17:39+01:00 quantum_runner.sh: execution host: ccwslurm2001.in2p3.fr
+2026-11-12T12:17:39+01:00 quantum_runner.sh: CPU architecture: x86_64
+2026-11-12T12:17:39+01:00 quantum_runner.sh: working directory: /pbs/home/d/dagoret/rubin_user/MyRubinLsstRunsatCC/scripts/myRunDRPELAISS1/2026-11-11-DRPstages1and2inTractandSelectedPatches
+2026-11-12T12:17:39+01:00 quantum_runner.sh: apptainer executable: /usr/bin/apptainer
+2026-11-12T12:17:39+01:00 quantum_runner.sh: apptainer version: 1.5.5-1.el9
+2026-11-12T12:17:39+01:00 quantum_runner.sh: pipelines container image: /cvmfs/sw.lsst.eu/containers/apptainer/x86_64/almalinux/lsst_distrib/w_2026_43
+2026-11-12T12:17:39+01:00 quantum_runner.sh: quantum payload: "pipetask --long-log --log-level=VERBOSE run-qbb --qgraph-node-id 01a1cf75-1965-74e9-9200-c26ec69efcda -j 1 -n 60 main /sps/lsst/users/dagoret/bps/submit/u/dagoret/LSSTCam/runelaiss1_20261111_tract2877patchsel_mediumpatcharray/stage2_v2/20261112T110933Z/u_dagoret_LSSTCam_runelaiss1_20261111_tract2877patchsel_mediumpatcharray_stage2_v2_20261112T110933Z.qg"
+2026-11-12T12:17:39+01:00 quantum_runner.sh: Slurm batch job details:
+2026-11-12T12:17:39+01:00 quantum_runner.sh:    SLURM_JOBID:           63587656
+2026-11-12T12:17:39+01:00 quantum_runner.sh:    SLURM_SUBMIT_HOST:     ccwslurm2001
+2026-11-12T12:17:39+01:00 quantum_runner.sh:    SLURM_SUBMIT_DIR:      /pbs/throng/lsst/users/dagoret/rubin_user/MyRubinLsstRunsatCC/scripts/myRunDRPELAISS1/2026-11-11-DRPstages1and2inTractandSelectedPatches
+2026-11-12T12:17:39+01:00 quantum_runner.sh:    SLURM_NODELIST:        ccwslurm2001
+2026-11-12T12:17:39+01:00 quantum_runner.sh:    SLURM_JOB_NUM_NODES:   1
+2026-11-12T12:17:39+01:00 quantum_runner.sh:    SLURM_NTASKS_PER_NODE: 1
+2026-11-12T12:17:39+01:00 quantum_runner.sh:    SLURM_CPUS_PER_TASK:   1
+2026-11-12T12:17:39+01:00 quantum_runner.sh:    SLURM_CPUS_ON_NODE:    1
+2026-11-12T12:17:39+01:00 quantum_runner.sh:    SLURM_MEM_PER_NODE:    153600
+INFO:    underlay of /etc/grid-security/certificates required more than 50 (100) bind mounts
+INFO 2026-11-12T12:17:54.946+01:00 lsst.ctrl.mpexec.cli.utils ()(utils.py:253) - QuantumGraph contains 1 quantum for 1 task
+Quanta    Tasks
+------ ------------
+     1 fgcmFitCycle
+INFO 2026-11-12T12:17:55.546+01:00 lsst.pipe.base.single_quantum_executor (fgcmFitCycle:{instrument: 'LSSTCam'})(single_quantum_executor.py:238) - Preparing execution of quantum for label=fgcmFitCycle dataId={instrument: 'LSSTCam'}.
+VERBOSE 2026-11-12T12:17:57.558+01:00 lsst.daf.butler.datastores.fileDatastore (fgcmFitCycle:{instrument: 'LSSTCam'})(fileDatastore.py:1558) - Number of datasets found in datastore main: 0 out of 591 datasets checked.
+INFO 2026-11-12T12:17:57.662+01:00 lsst.pipe.base.single_quantum_executor (fgcmFitCycle:{instrument: 'LSSTCam'})(single_quantum_executor.py:302) - Constructing task and executing quantum for label=fgcmFitCycle dataId={instrument: 'LSSTCam'}.
+INFO 2026-11-12T12:18:16.309+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:1536) - Loading focal plane projector
+INFO 2026-11-12T12:18:16.310+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmConfig.py:339) - Logging to external logger.
+INFO 2026-11-12T12:18:16.310+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmConfig.py:346) - Will reset atmosphere parameters
+INFO 2026-11-12T12:18:16.311+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmConfig.py:426) - Found 189 CCDs and 6 bands (u g r i z y)
+INFO 2026-11-12T12:18:16.311+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmConfig.py:684) - AB offset (w/o throughput) estimated as 30.6964
+INFO 2026-11-12T12:18:16.313+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:636) - Loading info on 1139 exposures.
+INFO 2026-11-12T12:18:16.313+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:698) - Exposures taken on 86 nights.
+INFO 2026-11-12T12:18:16.315+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:850) - Band u first used in wash index 0
+INFO 2026-11-12T12:18:16.315+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:850) - Band g first used in wash index 0
+INFO 2026-11-12T12:18:16.315+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:850) - Band r first used in wash index 0
+INFO 2026-11-12T12:18:16.315+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:850) - Band i first used in wash index 0
+INFO 2026-11-12T12:18:16.316+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:850) - Band z first used in wash index 0
+INFO 2026-11-12T12:18:16.316+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:850) - Band y first used in wash index 0
+INFO 2026-11-12T12:18:16.316+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:858) - Compiling indices for 1 mirror coating(s).
+INFO 2026-11-12T12:18:17.141+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:1661) - Loading stars and such
+INFO 2026-11-12T12:18:17.270+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:572) - Observations matched in 0.1 seconds.
+INFO 2026-11-12T12:18:17.271+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:166) - Flagging 0 stars as variable from previous cycles.
+INFO 2026-11-12T12:18:17.271+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:169) - Flagging 688 stars as reserved from previous cycles.
+INFO 2026-11-12T12:18:17.333+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:692) - Observations matched in 0.1 seconds.
+INFO 2026-11-12T12:18:17.343+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:724) - Done indexing in 0.0 seconds.
+INFO 2026-11-12T12:18:17.345+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:770) - 7.06924% stars have a reference match in the u band.
+INFO 2026-11-12T12:18:17.345+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:770) - 34.89621% stars have a reference match in the g band.
+INFO 2026-11-12T12:18:17.345+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:770) - 34.95427% stars have a reference match in the r band.
+INFO 2026-11-12T12:18:17.345+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:770) - 34.98331% stars have a reference match in the i band.
+INFO 2026-11-12T12:18:17.345+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:770) - 34.82363% stars have a reference match in the z band.
+INFO 2026-11-12T12:18:17.345+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:770) - 24.35767% stars have a reference match in the y band.
+INFO 2026-11-12T12:18:17.345+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:774) - Done matching reference stars in 0.0 seconds.
+INFO 2026-11-12T12:18:17.405+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:843) - Computed secZenith in 0.1 seconds.
+INFO 2026-11-12T12:18:17.574+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1014) - Flagging 0 of 6889 stars with TOO_FEW_OBS
+INFO 2026-11-12T12:18:17.716+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:96) - Default: fit 614 parameters.
+INFO 2026-11-12T12:18:17.718+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:256) - Memory usage at FitCycle Prepared: 15007 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:17.719+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:329) - Fit initial cycle starting...
+INFO 2026-11-12T12:18:17.719+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:333) - Memory usage at Starting: 15007 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:18.201+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:365) - Memory usage at Before good stars: 15058 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:18.350+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1014) - Flagging 0 of 6889 stars with TOO_FEW_OBS
+INFO 2026-11-12T12:18:18.351+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:372) - Memory usage at After select: 15052 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:18.351+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:412) - Memory usage at Initial chisq (before): 15052 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:18.351+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:285) - Found 6889 good stars for chisq
+INFO 2026-11-12T12:18:19.285+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:503) - Chisq computation took 0.93 seconds.
+INFO 2026-11-12T12:18:19.286+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:505) - Memory usage at end of chisq: 15111 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.286+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:414) - Memory usage at Initial chisq (after): 15111 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.286+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:417) - Memory usage at Bright (before): 15111 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.286+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmBrightObs.py:79) - Selecting good stars from Bright Observations
+INFO 2026-11-12T12:18:19.326+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmBrightObs.py:118) - Running BrightObs on 60 cores
+INFO 2026-11-12T12:18:19.501+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmBrightObs.py:150) - Finished BrightObs in 0.21 seconds.
+INFO 2026-11-12T12:18:19.501+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:420) - Memory usage at Bright (after): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.502+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1484) - Median SED slope in u band (0.00117319)
+INFO 2026-11-12T12:18:19.502+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1484) - Median SED slope in g band (0.00065123)
+INFO 2026-11-12T12:18:19.502+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1484) - Median SED slope in r band (0.00039074)
+INFO 2026-11-12T12:18:19.502+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1484) - Median SED slope in i band (0.00038605)
+INFO 2026-11-12T12:18:19.503+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1484) - Median SED slope in z band (0.00022067)
+INFO 2026-11-12T12:18:19.503+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1484) - Median SED slope in y band (0.00013579)
+INFO 2026-11-12T12:18:19.503+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:424) - Memory usage at Done fill missing SEDs: 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.503+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:427) - Memory usage at FitCycle Post Bright-Obs: 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.503+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:430) - Memory usage at Color cuts (before): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.503+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1669) - Applying color cut: 0.000 < g-i < 3.500
+INFO 2026-11-12T12:18:19.504+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1681) - Flag 84 stars of 6889 with BAD_COLOR
+INFO 2026-11-12T12:18:19.504+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1697) - Applying reference star color cut: 0.400 < g-i < 1.000
+INFO 2026-11-12T12:18:19.504+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1708) - Flag 6077 stars with REFSTAR_BAD_COLOR (ref colors)
+INFO 2026-11-12T12:18:19.504+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1717) - Flag 2259 stars with REFSTAR_BAD_COLOR (std colors)
+INFO 2026-11-12T12:18:19.504+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:432) - Memory usage at Color cuts (after): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.504+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:435) - Memory usage at Exp gray (before): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.651+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:269) - ExpGray for initial selection computed for 1091 exposures.
+INFO 2026-11-12T12:18:19.652+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:271) - Computed ExpGray for initial selection in 0.15 seconds.
+INFO 2026-11-12T12:18:19.652+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:437) - Memory usage at Exp gray (after): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.652+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:440) - Memory usage at Select good exps (before): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.652+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:111) - Flagged 126 bad exposures with bad fwhm.
+INFO 2026-11-12T12:18:19.652+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: u band: 14 of 121 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: g band: 39 of 229 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: r band: 23 of 180 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: i band: 24 of 298 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: z band: 26 of 207 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: y band: 0 of 104 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:117) - Flagged 87 bad exposures with too few stars
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: u band: 15 of 121 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: g band: 35 of 229 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: r band: 4 of 180 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: i band: 23 of 298 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: z band: 10 of 207 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: y band: 0 of 104 exposures
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:124) - Flagged 190 bad exposures with EXP_GRAY (initial) too large.
+INFO 2026-11-12T12:18:19.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: u band: 23 of 121 exposures
+INFO 2026-11-12T12:18:19.654+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: g band: 45 of 229 exposures
+INFO 2026-11-12T12:18:19.654+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: r band: 57 of 180 exposures
+INFO 2026-11-12T12:18:19.654+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: i band: 32 of 298 exposures
+INFO 2026-11-12T12:18:19.654+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: z band: 23 of 207 exposures
+INFO 2026-11-12T12:18:19.654+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: y band: 10 of 104 exposures
+INFO 2026-11-12T12:18:19.654+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:132) - There are now 824 of 1139 exposures that are potentially "photometric"
+INFO 2026-11-12T12:18:19.654+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:442) - Memory usage at Select good exps (after): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.654+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:446) - Memory usage at Select good stars (before): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.780+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1014) - Flagging 483 of 6889 stars with TOO_FEW_OBS
+INFO 2026-11-12T12:18:19.780+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:449) - Memory usage at Select good stars (after): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.780+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:453) - Memory usage at Abs (before): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.833+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:462) - Initial abs throughput in u band = 0.9088
+INFO 2026-11-12T12:18:19.834+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:462) - Initial abs throughput in g band = 0.9539
+INFO 2026-11-12T12:18:19.834+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:462) - Initial abs throughput in r band = 0.9964
+INFO 2026-11-12T12:18:19.834+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:462) - Initial abs throughput in i band = 1.0093
+INFO 2026-11-12T12:18:19.834+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:462) - Initial abs throughput in z band = 1.0506
+INFO 2026-11-12T12:18:19.834+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:462) - Initial abs throughput in y band = 1.0822
+INFO 2026-11-12T12:18:19.834+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:464) - Memory usage at Abs (after): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:19.835+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:467) - Memory usage at QE slope (before): 15162 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:20.092+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmQeSysSlope.py:188) - Wash interval 0, computed qe slope in all bands: 0.000000 +/- 0.000094 mmag/day
+INFO 2026-11-12T12:18:20.092+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:470) - Memory usage at QE slope (after): 15189 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:20.093+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:475) - Configured to precompute superstar flat on initial cycle
+INFO 2026-11-12T12:18:20.093+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:477) - Memory usage at Outliers (before): 15189 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:20.266+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1769) - Marked 20092 observations (2.0060%) as SUPERSTAR_OUTLIER
+INFO 2026-11-12T12:18:20.390+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1014) - Flagging 505 of 6889 stars with TOO_FEW_OBS
+INFO 2026-11-12T12:18:20.391+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:479) - Memory usage at Outliers (after): 15191 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:20.391+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:481) - Memory usage at Superstar (before): 15191 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:20.561+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1769) - Marked 3906 observations (0.3980%) as SUPERSTAR_OUTLIER
+INFO 2026-11-12T12:18:20.687+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1014) - Flagging 510 of 6889 stars with TOO_FEW_OBS
+INFO 2026-11-12T12:18:20.986+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 0 filter u_24: 0.00 +/- 2232743.00  Delta: -0.00 +/- 2232743.00 mmag
+INFO 2026-11-12T12:18:20.987+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 0 filter g_6: 0.00 +/- 10.93  Delta: 0.00 +/- 10.93 mmag
+INFO 2026-11-12T12:18:20.987+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 0 filter r_57: 0.00 +/- 12.26  Delta: 0.00 +/- 12.26 mmag
+INFO 2026-11-12T12:18:20.987+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 0 filter i_39: 0.00 +/- 10.54  Delta: -0.00 +/- 10.54 mmag
+INFO 2026-11-12T12:18:20.987+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 0 filter z_20: 0.00 +/- 17.79  Delta: 0.00 +/- 17.79 mmag
+INFO 2026-11-12T12:18:20.987+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 1 filter u_24: 0.00 +/- 31.79  Delta: 0.00 +/- 31.79 mmag
+INFO 2026-11-12T12:18:20.987+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 1 filter g_6: 0.00 +/- 32.54  Delta: -0.00 +/- 32.54 mmag
+INFO 2026-11-12T12:18:20.988+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 1 filter r_57: 0.00 +/- 17.71  Delta: 0.00 +/- 17.71 mmag
+INFO 2026-11-12T12:18:20.988+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 1 filter i_39: 0.00 +/- 819128.82  Delta: 0.00 +/- 819128.82 mmag
+INFO 2026-11-12T12:18:20.988+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 1 filter z_20: 0.00 +/- 40.67  Delta: 0.00 +/- 40.67 mmag
+INFO 2026-11-12T12:18:20.988+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 1 filter y_10: 0.00 +/- 816387.85  Delta: -0.00 +/- 816387.85 mmag
+INFO 2026-11-12T12:18:20.988+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 2 filter u_24: 0.00 +/- 1413775.66  Delta: -0.00 +/- 1413775.66 mmag
+INFO 2026-11-12T12:18:20.988+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 2 filter g_6: 0.00 +/- 30.35  Delta: -0.00 +/- 30.35 mmag
+INFO 2026-11-12T12:18:20.989+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 2 filter r_57: 0.00 +/- 1360447.98  Delta: 0.00 +/- 1360447.98 mmag
+INFO 2026-11-12T12:18:20.989+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 2 filter i_39: 0.00 +/- 54.79  Delta: -0.00 +/- 54.79 mmag
+INFO 2026-11-12T12:18:20.989+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 2 filter z_20: 0.00 +/- 17.27  Delta: 0.00 +/- 17.27 mmag
+INFO 2026-11-12T12:18:20.989+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:416) - Superstar epoch 2 filter y_10: 0.00 +/- 53.17  Delta: -0.00 +/- 53.17 mmag
+INFO 2026-11-12T12:18:20.989+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSuperStarFlat.py:422) - Computed SuperStarFlats in 0.60 seconds.
+INFO 2026-11-12T12:18:20.990+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:493) - Memory usage at Superstar (after): 15191 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:20.990+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:495) - Memory usage at Superstar apply (before): 15191 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:21.149+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:498) - Memory usage at Superstar apply (after): 15191 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:21.149+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:501) - Memory usage at Model mag errors (before): 15191 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:21.149+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmModelMagErrors.py:75) - Computing magnitude error model parameters...
+INFO 2026-11-12T12:18:26.515+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:503) - Memory usage at Model mag errors (after): 15192 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:26.516+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:148) - Number of good exposures: 824
+INFO 2026-11-12T12:18:26.516+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:156) - Flagging exposures on 18 bad nights with too few photometric exposures.
+INFO 2026-11-12T12:18:26.520+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:172) - Flagged 223 exposures on bad nights.
+INFO 2026-11-12T12:18:26.520+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_EXP_ON_NIGHT: u band: 27 of 121 exposures
+INFO 2026-11-12T12:18:26.520+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_EXP_ON_NIGHT: g band: 60 of 229 exposures
+INFO 2026-11-12T12:18:26.520+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_EXP_ON_NIGHT: r band: 52 of 180 exposures
+INFO 2026-11-12T12:18:26.520+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_EXP_ON_NIGHT: i band: 44 of 298 exposures
+INFO 2026-11-12T12:18:26.520+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_EXP_ON_NIGHT: z band: 32 of 207 exposures
+INFO 2026-11-12T12:18:26.520+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_EXP_ON_NIGHT: y band: 8 of 104 exposures
+INFO 2026-11-12T12:18:26.642+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1014) - Flagging 550 of 6889 stars with TOO_FEW_OBS
+INFO 2026-11-12T12:18:27.039+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1769) - Marked 19304 observations (1.9735%) as SUPERSTAR_OUTLIER
+INFO 2026-11-12T12:18:27.161+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1014) - Flagging 522 of 6889 stars with TOO_FEW_OBS
+INFO 2026-11-12T12:18:27.162+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:530) - Memory usage at Step units (before): 15192 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:27.163+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmComputeStepUnits.py:105) - Found 5645 good stars for step units
+INFO 2026-11-12T12:18:28.709+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmComputeStepUnits.py:299) - Step size computation took 1.55 seconds.
+INFO 2026-11-12T12:18:28.710+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:533) - Memory usage at Step units (after): 15313 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:28.710+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmParameters.py:589) - Resetting atmosphere parameters prior to fit.
+INFO 2026-11-12T12:18:28.710+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:540) - Memory usage at FitCycle Pre-Fit: 15313 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:28.710+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:853) - Performing fit with 100 iterations.
+INFO 2026-11-12T12:18:28.712+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:285) - Found 5645 good stars for chisq
+INFO 2026-11-12T12:18:30.371+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:426) - Actually fit 1 parameters.
+INFO 2026-11-12T12:18:30.371+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:482) - Chisq/dof = 5526.760555 (1 iterations)
+INFO 2026-11-12T12:18:30.371+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:503) - Chisq computation took 1.66 seconds.
+INFO 2026-11-12T12:18:30.372+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:505) - Memory usage at end of chisq: 15248 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:30.372+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:896) - Fit completed.  Final chi^2/DOF = 5526.760555
+INFO 2026-11-12T12:18:30.372+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:553) - Memory usage at FitCycle Post-Fit: 15248 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:31.884+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:482) - Chisq/dof = 5542.961185 (2 iterations)
+INFO 2026-11-12T12:18:31.885+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:503) - Chisq computation took 1.51 seconds.
+INFO 2026-11-12T12:18:31.885+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:505) - Memory usage at end of chisq: 15248 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:31.885+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:573) - Final abs throughput in u band = 0.4952
+INFO 2026-11-12T12:18:31.885+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:573) - Final abs throughput in g band = 0.9498
+INFO 2026-11-12T12:18:31.885+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:573) - Final abs throughput in r band = 0.8922
+INFO 2026-11-12T12:18:31.885+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:573) - Final abs throughput in i band = 0.3718
+INFO 2026-11-12T12:18:31.885+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:573) - Final abs throughput in z band = 1.0316
+INFO 2026-11-12T12:18:31.885+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:573) - Final abs throughput in y band = 0.9584
+INFO 2026-11-12T12:18:32.803+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:503) - Chisq computation took 0.92 seconds.
+INFO 2026-11-12T12:18:32.803+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmChisq.py:505) - Memory usage at end of chisq: 15248 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:32.804+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:583) - Memory usage at After recomputing chisq for all exposures: 15248 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:32.977+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1841) - Marked 74426 observations (6.4439%) as FOCALPLANE_OUTLIER
+INFO 2026-11-12T12:18:33.094+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1014) - Flagging 821 of 6889 stars with TOO_FEW_OBS
+INFO 2026-11-12T12:18:33.278+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1841) - Marked 26317 observations (2.4382%) as FOCALPLANE_OUTLIER_REF
+INFO 2026-11-12T12:18:33.393+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmStars.py:1014) - Flagging 863 of 6889 stars with TOO_FEW_OBS
+INFO 2026-11-12T12:18:33.394+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:592) - Memory usage at Before ccdgray and expgray: 15248 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:33.394+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:339) - Computing CCDGray and ExpGray.
+INFO 2026-11-12T12:18:33.623+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:628) - Computing CCDGray sub-ccd fits (no focal plane).
+INFO 2026-11-12T12:18:36.207+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:826) - ExpGray computed for 1064 exposures.
+INFO 2026-11-12T12:18:36.207+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:827) - Computed CCDGray and ExpGray in 2.81 seconds.
+INFO 2026-11-12T12:18:36.230+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1082) - sigExpGray (u) = 1159.33 mmag
+INFO 2026-11-12T12:18:36.249+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1082) - sigExpGray (g) = 21.96 mmag
+INFO 2026-11-12T12:18:36.271+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1082) - sigExpGray (r) = 1167.83 mmag
+INFO 2026-11-12T12:18:36.295+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1082) - sigExpGray (i) = 1062.82 mmag
+INFO 2026-11-12T12:18:36.313+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1082) - sigExpGray (z) = 25.55 mmag
+INFO 2026-11-12T12:18:36.334+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1082) - sigExpGray (y) = 1145.53 mmag
+INFO 2026-11-12T12:18:36.356+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1218) - Could not find any matched exposures between bands g and r within 10.00 minutes
+INFO 2026-11-12T12:18:36.356+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1218) - Could not find any matched exposures between bands r and i within 10.00 minutes
+INFO 2026-11-12T12:18:36.356+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1218) - Could not find any matched exposures between bands i and z within 10.00 minutes
+INFO 2026-11-12T12:18:36.530+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:595) - Memory usage at After ccdgray and expgray: 15249 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:36.536+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1300) - ExpGray cut (u band): -0.2000
+INFO 2026-11-12T12:18:36.536+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1302) - ExpGray high cut (u band): 0.4000
+INFO 2026-11-12T12:18:36.538+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1300) - ExpGray cut (g band): -0.0575
+INFO 2026-11-12T12:18:36.538+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1302) - ExpGray high cut (g band): 0.1425
+INFO 2026-11-12T12:18:36.544+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1300) - ExpGray cut (r band): -0.1000
+INFO 2026-11-12T12:18:36.544+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1302) - ExpGray high cut (r band): 0.4000
+INFO 2026-11-12T12:18:36.550+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1300) - ExpGray cut (i band): -0.1000
+INFO 2026-11-12T12:18:36.550+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1302) - ExpGray high cut (i band): 0.4000
+INFO 2026-11-12T12:18:36.552+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1300) - ExpGray cut (z band): -0.0825
+INFO 2026-11-12T12:18:36.552+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1302) - ExpGray high cut (z band): 0.1500
+INFO 2026-11-12T12:18:36.557+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1300) - ExpGray cut (y band): -0.1000
+INFO 2026-11-12T12:18:36.557+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmGray.py:1302) - ExpGray high cut (y band): 0.4000
+INFO 2026-11-12T12:18:36.558+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:600) - Memory usage at After computing CCD and Exp Gray: 15249 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:36.558+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:605) - Memory usage at Before Delta Aper: 15249 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:36.558+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:90) - Computing deltaAper offset per exposure
+INFO 2026-11-12T12:18:36.742+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:155) - Compute per-star deltaAper
+INFO 2026-11-12T12:18:36.783+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:176) - Running DeltaAper on 60 cores
+INFO 2026-11-12T12:18:36.846+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:200) - Finished DeltaAper in 0.10 seconds.
+INFO 2026-11-12T12:18:36.847+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:261) - Global background offset in u band: -9999.00000 nJy/arcsec2
+INFO 2026-11-12T12:18:36.923+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:261) - Global background offset in g band: -2.17686 nJy/arcsec2
+INFO 2026-11-12T12:18:36.949+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:261) - Global background offset in r band: -9999.00000 nJy/arcsec2
+INFO 2026-11-12T12:18:37.059+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:261) - Global background offset in i band: -39.03196 nJy/arcsec2
+INFO 2026-11-12T12:18:37.111+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:261) - Global background offset in z band: -28.60065 nJy/arcsec2
+INFO 2026-11-12T12:18:37.272+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:261) - Global background offset in y band: -22.60383 nJy/arcsec2
+INFO 2026-11-12T12:18:37.272+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmDeltaAper.py:319) - Computing delta-aper epsilon spatial map at nside 32
+WARNING 2026-11-12T12:18:37.567+01:00 py.warnings (fgcmFitCycle:{instrument: 'LSSTCam'})(warnings.py:110) - /opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+
+WARNING 2026-11-12T12:18:37.568+01:00 py.warnings (fgcmFitCycle:{instrument: 'LSSTCam'})(warnings.py:110) - /opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+
+INFO 2026-11-12T12:18:37.647+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:622) - Memory usage at After Delta Aper: 15268 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:37.647+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:626) - Memory usage at Before sig fgcm: 15268 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:37.768+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (u) (All) = 27.87 mmag
+INFO 2026-11-12T12:18:37.778+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in u band (color cut 1).
+INFO 2026-11-12T12:18:37.787+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in u band (color cut 2).
+INFO 2026-11-12T12:18:37.796+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in u band (color cut 3).
+INFO 2026-11-12T12:18:37.818+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (g) (All) = 24.53 mmag
+INFO 2026-11-12T12:18:37.841+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (g) (Blue25) = 23.44 mmag
+INFO 2026-11-12T12:18:37.862+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (g) (Middle50) = 19.37 mmag
+INFO 2026-11-12T12:18:37.878+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:211) - Typical error is larger than width (g) (Red25).  Setting to 0.001
+INFO 2026-11-12T12:18:37.879+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (g) (Red25) = 1.00 mmag
+INFO 2026-11-12T12:18:37.893+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (r) (All) = 41.14 mmag
+INFO 2026-11-12T12:18:37.913+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (r) (Blue25) = 32.64 mmag
+INFO 2026-11-12T12:18:37.933+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (r) (Middle50) = 29.19 mmag
+INFO 2026-11-12T12:18:37.944+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in r band (color cut 3).
+INFO 2026-11-12T12:18:37.956+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (i) (All) = 26.87 mmag
+INFO 2026-11-12T12:18:37.975+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (i) (Blue25) = 26.66 mmag
+INFO 2026-11-12T12:18:37.993+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (i) (Middle50) = 8.96 mmag
+INFO 2026-11-12T12:18:38.011+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (i) (Red25) = 18.43 mmag
+INFO 2026-11-12T12:18:38.031+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (z) (All) = 25.57 mmag
+INFO 2026-11-12T12:18:38.055+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (z) (Blue25) = 25.58 mmag
+INFO 2026-11-12T12:18:38.078+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (z) (Middle50) = 25.66 mmag
+INFO 2026-11-12T12:18:38.097+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (z) (Red25) = 28.78 mmag
+INFO 2026-11-12T12:18:38.118+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (y) (All) = 46.36 mmag
+INFO 2026-11-12T12:18:38.138+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (y) (Blue25) = 57.66 mmag
+INFO 2026-11-12T12:18:38.157+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (y) (Middle50) = 41.30 mmag
+INFO 2026-11-12T12:18:38.181+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - fit sigFgcm (y) (Red25) = 11.90 mmag
+INFO 2026-11-12T12:18:38.193+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (u) (All) = 6.80
+INFO 2026-11-12T12:18:38.204+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in u band (color cut 1).
+INFO 2026-11-12T12:18:38.215+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in u band (color cut 2).
+INFO 2026-11-12T12:18:38.226+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in u band (color cut 3).
+INFO 2026-11-12T12:18:38.245+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (g) (All) = 6.00
+INFO 2026-11-12T12:18:38.269+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (g) (Blue25) = 5.84
+INFO 2026-11-12T12:18:38.290+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (g) (Middle50) = 4.66
+INFO 2026-11-12T12:18:38.306+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (g) (Red25) = 1.00
+INFO 2026-11-12T12:18:38.320+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (r) (All) = 6.26
+INFO 2026-11-12T12:18:38.341+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (r) (Blue25) = 6.27
+INFO 2026-11-12T12:18:38.360+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (r) (Middle50) = 6.05
+INFO 2026-11-12T12:18:38.371+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in r band (color cut 3).
+INFO 2026-11-12T12:18:38.384+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (i) (All) = 14.83
+INFO 2026-11-12T12:18:38.402+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (i) (Blue25) = 6.45
+INFO 2026-11-12T12:18:38.426+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (i) (Middle50) = 9.75
+INFO 2026-11-12T12:18:38.453+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (i) (Red25) = 2.07
+INFO 2026-11-12T12:18:38.473+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (z) (All) = 6.50
+INFO 2026-11-12T12:18:38.497+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (z) (Blue25) = 6.65
+INFO 2026-11-12T12:18:38.520+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (z) (Middle50) = 6.32
+INFO 2026-11-12T12:18:38.540+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (z) (Red25) = 6.21
+INFO 2026-11-12T12:18:38.553+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (y) (All) = 8.79
+INFO 2026-11-12T12:18:38.573+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (y) (Blue25) = 8.44
+INFO 2026-11-12T12:18:38.593+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (y) (Middle50) = 8.37
+INFO 2026-11-12T12:18:38.616+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - fit sigFgcmPull (y) (Red25) = 2.79
+INFO 2026-11-12T12:18:38.617+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:372) - Done computing sigFgcm in 0.97 sec.
+INFO 2026-11-12T12:18:38.650+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (u) (All) = 29.07 mmag
+INFO 2026-11-12T12:18:38.651+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in u band (color cut 1).
+INFO 2026-11-12T12:18:38.652+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in u band (color cut 2).
+INFO 2026-11-12T12:18:38.653+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in u band (color cut 3).
+INFO 2026-11-12T12:18:38.661+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (g) (All) = 27.64 mmag
+INFO 2026-11-12T12:18:38.670+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (g) (Blue25) = 25.90 mmag
+INFO 2026-11-12T12:18:38.678+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (g) (Middle50) = 24.35 mmag
+INFO 2026-11-12T12:18:38.679+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in g band (color cut 3).
+INFO 2026-11-12T12:18:38.686+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (r) (All) = 30.94 mmag
+INFO 2026-11-12T12:18:38.694+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (r) (Blue25) = 22.72 mmag
+INFO 2026-11-12T12:18:38.709+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (r) (Middle50) = 32.00 mmag
+INFO 2026-11-12T12:18:38.710+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in r band (color cut 3).
+INFO 2026-11-12T12:18:38.717+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (i) (All) = 24.35 mmag
+INFO 2026-11-12T12:18:38.725+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (i) (Blue25) = 26.66 mmag
+INFO 2026-11-12T12:18:38.730+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:211) - Typical error is larger than width (i) (Middle50).  Setting to 0.001
+INFO 2026-11-12T12:18:38.730+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (i) (Middle50) = 1.00 mmag
+INFO 2026-11-12T12:18:38.731+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in i band (color cut 3).
+INFO 2026-11-12T12:18:38.739+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (z) (All) = 24.79 mmag
+INFO 2026-11-12T12:18:38.748+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (z) (Blue25) = 24.37 mmag
+INFO 2026-11-12T12:18:38.757+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (z) (Middle50) = 25.31 mmag
+INFO 2026-11-12T12:18:38.762+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:211) - Typical error is larger than width (z) (Red25).  Setting to 0.001
+INFO 2026-11-12T12:18:38.762+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (z) (Red25) = 1.00 mmag
+INFO 2026-11-12T12:18:38.769+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (y) (All) = 36.01 mmag
+INFO 2026-11-12T12:18:38.777+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (y) (Blue25) = 39.64 mmag
+INFO 2026-11-12T12:18:38.784+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:218) - reserved sigFgcm (y) (Middle50) = 40.64 mmag
+INFO 2026-11-12T12:18:38.785+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:193) - sigFGCM: No good observations in y band (color cut 3).
+INFO 2026-11-12T12:18:38.791+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (u) (All) = 6.67
+INFO 2026-11-12T12:18:38.792+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in u band (color cut 1).
+INFO 2026-11-12T12:18:38.793+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in u band (color cut 2).
+INFO 2026-11-12T12:18:38.794+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in u band (color cut 3).
+INFO 2026-11-12T12:18:38.803+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (g) (All) = 6.92
+INFO 2026-11-12T12:18:38.811+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (g) (Blue25) = 6.48
+INFO 2026-11-12T12:18:38.819+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (g) (Middle50) = 5.98
+INFO 2026-11-12T12:18:38.820+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in g band (color cut 3).
+INFO 2026-11-12T12:18:38.835+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (r) (All) = 6.94
+INFO 2026-11-12T12:18:38.843+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (r) (Blue25) = 5.67
+INFO 2026-11-12T12:18:38.850+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (r) (Middle50) = 8.79
+INFO 2026-11-12T12:18:38.851+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in r band (color cut 3).
+INFO 2026-11-12T12:18:38.859+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (i) (All) = 9.59
+INFO 2026-11-12T12:18:38.866+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (i) (Blue25) = 6.45
+INFO 2026-11-12T12:18:38.871+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (i) (Middle50) = 1.00
+INFO 2026-11-12T12:18:38.872+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in i band (color cut 3).
+INFO 2026-11-12T12:18:38.881+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (z) (All) = 6.47
+INFO 2026-11-12T12:18:38.889+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (z) (Blue25) = 6.69
+INFO 2026-11-12T12:18:38.898+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (z) (Middle50) = 6.33
+INFO 2026-11-12T12:18:38.903+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (z) (Red25) = 1.00
+INFO 2026-11-12T12:18:38.910+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (y) (All) = 8.60
+INFO 2026-11-12T12:18:38.918+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (y) (Blue25) = 13.01
+INFO 2026-11-12T12:18:38.925+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:323) - reserved sigFgcmPull (y) (Middle50) = 7.51
+INFO 2026-11-12T12:18:38.926+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:307) - sigFGCMPulls: No good observations in y band (color cut 3).
+INFO 2026-11-12T12:18:38.926+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmSigFgcm.py:372) - Done computing sigFgcm in 0.31 sec.
+INFO 2026-11-12T12:18:38.927+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:634) - Memory usage at After sig fgcm: 15270 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:38.927+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmFitCycle.py:637) - Memory usage at After computing sigFGCM: 15270 MB current; 30460 MB peak.
+INFO 2026-11-12T12:18:38.927+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:41) - Flagged 126 bad exposures with bad fwhm.
+INFO 2026-11-12T12:18:38.927+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: u band: 14 of 121 exposures
+INFO 2026-11-12T12:18:38.927+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: g band: 39 of 229 exposures
+INFO 2026-11-12T12:18:38.927+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: r band: 23 of 180 exposures
+INFO 2026-11-12T12:18:38.927+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: i band: 24 of 298 exposures
+INFO 2026-11-12T12:18:38.927+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: z band: 26 of 207 exposures
+INFO 2026-11-12T12:18:38.927+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  BAD_FWHM: y band: 0 of 104 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:47) - Flagged 61 bad exposures with no stars
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  NO_STARS: u band: 9 of 121 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  NO_STARS: g band: 26 of 229 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  NO_STARS: r band: 3 of 180 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  NO_STARS: i band: 14 of 298 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  NO_STARS: z band: 9 of 207 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  NO_STARS: y band: 0 of 104 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:55) - Flagged 32 bad exposures with too few stars.
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: u band: 7 of 121 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: g band: 9 of 229 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: r band: 4 of 180 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: i band: 11 of 298 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: z band: 1 of 207 exposures
+INFO 2026-11-12T12:18:38.928+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  TOO_FEW_STARS: y band: 0 of 104 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:65) - Flagged 529 bad exposures with EXP_GRAY too negative.
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: u band: 80 of 121 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: g band: 68 of 229 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: r band: 93 of 180 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: i band: 199 of 298 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: z band: 42 of 207 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_NEGATIVE: y band: 47 of 104 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:74) - Flagged 117 bad exposures with EXP_GRAY too positive.
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_POSITIVE: u band: 32 of 121 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_POSITIVE: g band: 0 of 229 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_POSITIVE: r band: 0 of 180 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_POSITIVE: i band: 85 of 298 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_POSITIVE: z band: 0 of 207 exposures
+INFO 2026-11-12T12:18:38.929+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  EXP_GRAY_TOO_POSITIVE: y band: 0 of 104 exposures
+INFO 2026-11-12T12:18:38.930+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmExposureSelector.py:82) - Flagged 11 bad exposures with VAR_GRAY too large.
+INFO 2026-11-12T12:18:38.930+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  VAR_GRAY_TOO_LARGE: u band: 0 of 121 exposures
+INFO 2026-11-12T12:18:38.930+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  VAR_GRAY_TOO_LARGE: g band: 0 of 229 exposures
+INFO 2026-11-12T12:18:38.930+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  VAR_GRAY_TOO_LARGE: r band: 3 of 180 exposures
+INFO 2026-11-12T12:18:38.930+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  VAR_GRAY_TOO_LARGE: i band: 8 of 298 exposures
+INFO 2026-11-12T12:18:38.930+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  VAR_GRAY_TOO_LARGE: z band: 0 of 207 exposures
+INFO 2026-11-12T12:18:38.930+01:00 lsst.fgcmFitCycle (fgcmFitCycle:{instrument: 'LSSTCam'})(fgcmUtilities.py:762) -  VAR_GRAY_TOO_LARGE: y band: 0 of 104 exposures
+ERROR 2026-11-12T12:18:38.930+01:00 lsst.pipe.base.single_quantum_executor (fgcmFitCycle:{instrument: 'LSSTCam'})(single_quantum_executor.py:316) - Execution of task 'fgcmFitCycle' on quantum {instrument: 'LSSTCam'} failed. Exception RuntimeError: FATAL: All observations in %s band have been cut!
+ERROR 2026-11-12T12:18:39.112+01:00 lsst.pipe.base.mp_graph_executor (fgcmFitCycle:{instrument: 'LSSTCam'})(mp_graph_executor.py:726) - 01a1cf75-1965-74e9-9200-c26ec69efcda (fgcmFitCycle@{instrument: 'LSSTCam'}) failed; processing will continue for remaining tasks.
+Traceback (most recent call last):
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/gf24a075aa2+a99ac17d31/python/lsst/pipe/base/mp_graph_executor.py", line 659, in _execute_quanta_in_process
+    execution_result = self._quantum_executor.execute(
+        task_node, quantum, quantum_id=quantum_id, log_records=task_logs
+    )
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/gf24a075aa2+a99ac17d31/python/lsst/pipe/base/single_quantum_executor.py", line 179, in execute
+    return self._execute(task_node, quantum, quantum_id=quantum_id, log_records=log_records)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/gf24a075aa2+a99ac17d31/python/lsst/pipe/base/single_quantum_executor.py", line 209, in _execute
+    return self._execute_with_limited_butler(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        task_node, limited_butler, quantum=quantum, quantum_id=quantum_id, log_records=log_records
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/gf24a075aa2+a99ac17d31/python/lsst/pipe/base/single_quantum_executor.py", line 312, in _execute_with_limited_butler
+    caveats = self._run_quantum(
+        task, quantum, task_node, limited_butler, quantum_id=quantum_id, ids_put=outputs_put
+    )
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/gf24a075aa2+a99ac17d31/python/lsst/pipe/base/single_quantum_executor.py", line 596, in _run_quantum
+    task.runQuantum(butlerQC, inputRefs, outputRefs)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/fgcmcal/g0fd01c8516+cde1b6323f/python/lsst/fgcmcal/fgcmFitCycle.py", line 1343, in runQuantum
+    fgcmDatasetDict, config, fgcmMultiCycleObjects = self._fgcmFitCycle(
+                                                     ~~~~~~~~~~~~~~~~~~^
+        camera,
+        ^^^^^^^
+    ...<5 lines>...
+        fgcmMultiCycleObjects=fgcmMultiCycleObjects,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/fgcmcal/g0fd01c8516+cde1b6323f/python/lsst/fgcmcal/fgcmFitCycle.py", line 1788, in _fgcmFitCycle
+    fgcmFitCycle.run()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/fgcm/g17573debd1/lib/python/fgcm/fgcmFitCycle.py", line 650, in run
+    self.expSelector.selectGoodExposures()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/fgcm/g17573debd1/lib/python/fgcm/fgcmExposureSelector.py", line 87, in selectGoodExposures
+    checkFlaggedExposuresPerBand(self.fgcmLog, self.fgcmPars)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/fgcm/g17573debd1/lib/python/fgcm/fgcmUtilities.py", line 785, in checkFlaggedExposuresPerBand
+    raise RuntimeError("FATAL: All observations in %s band have been cut!")
+RuntimeError: FATAL: All observations in %s band have been cut!
+INFO 2026-11-12T12:18:39.120+01:00 lsst.pipe.base.mp_graph_executor ()(mp_graph_executor.py:757) - Executed 0 quanta successfully, 1 failed and 0 remain out of total 1 quanta.
+ERROR 2026-11-12T12:18:39.120+01:00 lsst.daf.butler.cli.utils ()(utils.py:218) - Caught an exception, details are in traceback:
+Traceback (most recent call last):
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/ctrl_mpexec/g032e5f9b47+9ee56b66f4/python/lsst/ctrl/mpexec/cli/cmd/commands.py", line 306, in run_qbb
+    script.run_qbb(butler_config=repo, qgraph=qgraph, **kwargs)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/ctrl_mpexec/g032e5f9b47+9ee56b66f4/python/lsst/ctrl/mpexec/cli/script/run_qbb.py", line 208, in run_qbb
+    executor.execute(qg)
+    ~~~~~~~~~~~~~~~~^^^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/gf24a075aa2+a99ac17d31/python/lsst/pipe/base/mp_graph_executor.py", line 573, in execute
+    raise err
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/gf24a075aa2+a99ac17d31/python/lsst/pipe/base/mp_graph_executor.py", line 558, in execute
+    self._execute_quanta_in_process(xgraph, self._report, provenance_writer)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/gf24a075aa2+a99ac17d31/python/lsst/pipe/base/mp_graph_executor.py", line 767, in _execute_quanta_in_process
+    raise MPGraphExecutorError("One or more tasks failed during execution.")
+lsst.pipe.base.mp_graph_executor.MPGraphExecutorError: One or more tasks failed during execution.
+2026-11-12T12:18:42+01:00 quantum_runner.sh: quantum execution exit code: 1
+2026-11-12T12:18:42+01:00 quantum_runner.sh: execution of this quantum took 00:01:03
