@@ -7,6 +7,9 @@ export TRACTIDS=$(paste -sd, tractIds.txt)
 export CCDIDS=$(paste -sd, ccdIds.txt)
 export NOVISITS=$(paste -sd, visits_to_exclude.txt)
 
+echo "Prepare to run RUBIN-LSST STAGE2 pipeline on some tract and patches belonging to DDF COSMOS"
+
+
 echo "Init EXPOSURES EXCLUDED"
 echo $NOVISITS
 

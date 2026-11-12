@@ -5,7 +5,7 @@ export CCDIDS=$(paste -sd, ccdIds.txt)
 export PATCHIDS=$(paste -sd, patchIds_mediumarray.txt)
 export TRACTIDS=$(paste -sd, tractIds.txt)
 
-echo "Prepare to run rubin-lsst stage1 pipeline on some tract and patches belonging to DDF ELAIS S1"
+echo "Prepare to run RUBIN-LSST STAGE1 pipeline on some tract and patches belonging to DDF ELAIS S1"
 
 echo "Init list of CCDS"
 echo $CCDIDS

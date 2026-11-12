@@ -6,6 +6,9 @@ export CCDIDS=$(paste -sd, ccdIds.txt)
 export PATCHIDS=$(paste -sd, patchIds.txt)
 export TRACTIDS=$(paste -sd, tractIds.txt)
 
+echo "Prepare to run RUBIN-LSST STAGE1 pipeline on some tract and patches belonging to DDF COSMOS"
+
+
 echo "Init CCDS"
 echo $CCDIDS
 
