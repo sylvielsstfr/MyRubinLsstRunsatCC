@@ -1,0 +1,15 @@
+lsst.pipe.base.quantum_graph_builder INFO: Processing pipeline subgraph 1 of 1 with 3 task(s).
+lsst.pipe.base.quantum_graph_builder INFO: Iterating over data ID query results.
+lsst.pipe.base.quantum_graph_builder INFO: Initial bipartite graph has 3 quanta, 3912 dataset nodes, and 3914 edges.
+lsst.pipe.base.quantum_graph_builder INFO: Generated 1 quantum for task fgcmBuildFromIsolatedStar.
+lsst.pipe.base.quantum_graph_builder INFO: Generated 1 quantum for task fgcmFitCycle.
+lsst.pipe.base.quantum_graph_builder INFO: Generated 1 quantum for task fgcmOutputProducts.
+lsst.pipe.base.quantum_graph_builder INFO: Transforming graph skeleton into PredictedQuantumGraph components.
+lsst.pipe.base.quantum_graph_builder INFO: Graph build complete.
+lsst.pipe.base.quantum_graph._predicted WARNING: Converting to an old-format quantum graph.. Use '.qg' instead of '.qgraph' to save in the new format.
+lsst.ctrl.mpexec.cli.utils INFO: QuantumGraph contains 3 quanta for 3 tasks
+Quanta           Tasks
+------ -------------------------
+     1 fgcmBuildFromIsolatedStar
+     1              fgcmFitCycle
+     1        fgcmOutputProducts

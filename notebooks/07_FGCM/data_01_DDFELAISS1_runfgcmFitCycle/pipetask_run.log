@@ -1,0 +1,499 @@
+lsst.ctrl.mpexec.cli.utils INFO: QuantumGraph contains 3 quanta for 3 tasks
+Quanta           Tasks
+------ -------------------------
+     1 fgcmBuildFromIsolatedStar
+     1              fgcmFitCycle
+     1        fgcmOutputProducts
+lsst.pipe.base.single_quantum_executor INFO: Preparing execution of quantum for label=fgcmBuildFromIsolatedStar dataId={instrument: 'LSSTCam'}.
+lsst.pipe.base.single_quantum_executor INFO: Constructing task and executing quantum for label=fgcmBuildFromIsolatedStar dataId={instrument: 'LSSTCam'}.
+lsst.fgcmBuildFromIsolatedStar INFO: Assembling visitCatalog from 1101 visits
+lsst.fgcmBuildFromIsolatedStar INFO: Retrieving metadata for visit 2025062900651 (0/1101)
+lsst.fgcmBuildFromIsolatedStar INFO: Retrieving metadata for visit 2025090500268 (500/1101)
+lsst.fgcmBuildFromIsolatedStar INFO: Retrieving metadata for visit 2026011700281 (1000/1101)
+lsst.fgcmBuildFromIsolatedStar INFO: Memory usage at Loading tract index 0: 506 MB current; 8659 MB peak.
+lsst.fgcmBuildFromIsolatedStar INFO: Tract 2877 (0/1) contains 1621602 good sources.
+lsst.fgcmBuildFromIsolatedStar INFO: There are 3/14 pixels with high stellar density.
+lsst.fgcmBuildFromIsolatedStar INFO: Memory usage at Loading tract index 0: 588 MB current; 8659 MB peak.
+lsst.fgcmBuildFromIsolatedStar INFO: Tract 2877 (0/1) contains 1621602 good sources.
+lsst.fgcmBuildFromIsolatedStar INFO: Using the following reference filters: u_24, g_6, r_57, i_39, z_20, y_10
+lsst.fgcmBuildFromIsolatedStar INFO: Loading reference objects from the_monster_20250219 in region bounded by [10.01242841, 10.15255992], [-44.51743611, -44.41743267] RA Dec
+lsst.fgcmBuildFromIsolatedStar INFO: Loaded 32 reference objects
+lsst.fgcmBuildFromIsolatedStar INFO: Loading reference objects from the_monster_20250219 in region bounded by [9.59405803, 10.57093030], [-44.81600353, -44.11886525] RA Dec
+lsst.fgcmBuildFromIsolatedStar INFO: Loaded 1461 reference objects
+lsst.fgcmBuildFromIsolatedStar.fgcmLoadReferenceCatalog.referenceSelector INFO: Selected 925/1461 references
+lsst.fgcmBuildFromIsolatedStar INFO: Found 272 reference matches in pixel 35382 (0 of 5).
+lsst.fgcmBuildFromIsolatedStar INFO: Loading reference objects from the_monster_20250219 in region bounded by [10.23706534, 10.49134466], [-44.34852239, -44.16640604] RA Dec
+lsst.fgcmBuildFromIsolatedStar INFO: Loaded 112 reference objects
+lsst.fgcmBuildFromIsolatedStar.fgcmLoadReferenceCatalog.referenceSelector INFO: Selected 72/112 references
+lsst.fgcmBuildFromIsolatedStar INFO: Found 5 reference matches in pixel 35383 (1 of 5).
+lsst.fgcmBuildFromIsolatedStar INFO: Loading reference objects from the_monster_20250219 in region bounded by [8.33904085, 10.84128701], [-45.09841470, -43.30464500] RA Dec
+lsst.fgcmBuildFromIsolatedStar INFO: Loaded 9176 reference objects
+lsst.fgcmBuildFromIsolatedStar.fgcmLoadReferenceCatalog.referenceSelector INFO: Selected 6142/9176 references
+lsst.fgcmBuildFromIsolatedStar INFO: Found 1204 reference matches in pixel 35388 (2 of 5).
+lsst.fgcmBuildFromIsolatedStar INFO: Loading reference objects from the_monster_20250219 in region bounded by [9.66021899, 12.11397456], [-44.29814311, -42.51557386] RA Dec
+lsst.fgcmBuildFromIsolatedStar INFO: Loaded 8697 reference objects
+lsst.fgcmBuildFromIsolatedStar.fgcmLoadReferenceCatalog.referenceSelector INFO: Selected 5504/8697 references
+lsst.fgcmBuildFromIsolatedStar INFO: Found 184 reference matches in pixel 35389 (3 of 5).
+lsst.fgcmBuildFromIsolatedStar INFO: Loading reference objects from the_monster_20250219 in region bounded by [8.19772112, 10.67324663], [-44.30605009, -42.50766688] RA Dec
+lsst.fgcmBuildFromIsolatedStar INFO: Loaded 8928 reference objects
+lsst.fgcmBuildFromIsolatedStar.fgcmLoadReferenceCatalog.referenceSelector INFO: Selected 6026/8928 references
+lsst.fgcmBuildFromIsolatedStar INFO: Found 739 reference matches in pixel 35390 (4 of 5).
+lsst.fgcmBuildFromIsolatedStar INFO: Loading reference objects from the_monster_20250219 in region bounded by [10.11223228, 10.24196574], [-43.40602653, -43.31170277] RA Dec
+lsst.fgcmBuildFromIsolatedStar INFO: Loaded 24 reference objects
+lsst.fgcmBuildFromIsolatedStar.fgcmLoadReferenceCatalog.referenceSelector INFO: Selected 17/24 references
+lsst.fgcmBuildFromIsolatedStar INFO: Found 6 reference matches in pixel 35391 (5 of 5).
+lsst.pipe.base.single_quantum_executor INFO: Execution of task 'fgcmBuildFromIsolatedStar' on quantum {instrument: 'LSSTCam'} took 140.747 seconds
+lsst.pipe.base.mp_graph_executor INFO: Executed 1 quanta successfully, 0 failed and 2 remain out of total 3 quanta.
+lsst.pipe.base.single_quantum_executor INFO: Preparing execution of quantum for label=fgcmFitCycle dataId={instrument: 'LSSTCam'}.
+lsst.pipe.base.single_quantum_executor INFO: Constructing task and executing quantum for label=fgcmFitCycle dataId={instrument: 'LSSTCam'}.
+lsst.fgcmFitCycle INFO: Loading focal plane projector
+lsst.fgcmFitCycle INFO: Logging to external logger.
+lsst.fgcmFitCycle INFO: Will reset atmosphere parameters
+lsst.fgcmFitCycle INFO: Found 189 CCDs and 6 bands (u g r i z y)
+lsst.fgcmFitCycle INFO: AB offset (w/o throughput) estimated as 30.6964
+lsst.fgcmFitCycle INFO: Loading info on 1101 exposures.
+lsst.fgcmFitCycle INFO: Exposures taken on 85 nights.
+lsst.fgcmFitCycle INFO: Band u first used in wash index 0
+lsst.fgcmFitCycle INFO: Band g first used in wash index 0
+lsst.fgcmFitCycle INFO: Band r first used in wash index 0
+lsst.fgcmFitCycle INFO: Band i first used in wash index 0
+lsst.fgcmFitCycle INFO: Band z first used in wash index 0
+lsst.fgcmFitCycle INFO: Band y first used in wash index 0
+lsst.fgcmFitCycle INFO: Compiling indices for 1 mirror coating(s).
+lsst.fgcmFitCycle INFO: Loading stars and such
+lsst.fgcmFitCycle INFO: Observations matched in 0.1 seconds.
+lsst.fgcmFitCycle INFO: Flagging 0 stars as variable from previous cycles.
+lsst.fgcmFitCycle INFO: Flagging 688 stars as reserved from previous cycles.
+lsst.fgcmFitCycle INFO: Observations matched in 0.1 seconds.
+lsst.fgcmFitCycle INFO: Done indexing in 0.0 seconds.
+lsst.fgcmFitCycle INFO: 7.06924% stars have a reference match in the u band.
+lsst.fgcmFitCycle INFO: 34.89621% stars have a reference match in the g band.
+lsst.fgcmFitCycle INFO: 34.95427% stars have a reference match in the r band.
+lsst.fgcmFitCycle INFO: 34.98331% stars have a reference match in the i band.
+lsst.fgcmFitCycle INFO: 34.82363% stars have a reference match in the z band.
+lsst.fgcmFitCycle INFO: 24.35767% stars have a reference match in the y band.
+lsst.fgcmFitCycle INFO: Done matching reference stars in 0.0 seconds.
+lsst.fgcmFitCycle INFO: Computed secZenith in 0.1 seconds.
+lsst.fgcmFitCycle INFO: Flagging 0 of 6889 stars with TOO_FEW_OBS
+lsst.fgcmFitCycle INFO: Default: fit 607 parameters.
+lsst.fgcmFitCycle INFO: Memory usage at FitCycle Prepared: 15044 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Fit initial cycle starting...
+lsst.fgcmFitCycle INFO: Memory usage at Starting: 15044 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Before good stars: 14933 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Flagging 0 of 6889 stars with TOO_FEW_OBS
+lsst.fgcmFitCycle INFO: Memory usage at After select: 14965 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Initial chisq (before): 14965 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Found 6889 good stars for chisq
+lsst.fgcmFitCycle INFO: Chisq computation took 1.24 seconds.
+lsst.fgcmFitCycle INFO: Memory usage at end of chisq: 14925 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Initial chisq (after): 14925 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Bright (before): 14925 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Selecting good stars from Bright Observations
+lsst.fgcmFitCycle INFO: Running BrightObs on 1 cores
+lsst.fgcmFitCycle INFO: Finished BrightObs in 0.34 seconds.
+lsst.fgcmFitCycle INFO: Memory usage at Bright (after): 14952 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Median SED slope in u band (0.00117319)
+lsst.fgcmFitCycle INFO: Median SED slope in g band (0.00065123)
+lsst.fgcmFitCycle INFO: Median SED slope in r band (0.00039074)
+lsst.fgcmFitCycle INFO: Median SED slope in i band (0.00038605)
+lsst.fgcmFitCycle INFO: Median SED slope in z band (0.00022067)
+lsst.fgcmFitCycle INFO: Median SED slope in y band (0.00013579)
+lsst.fgcmFitCycle INFO: Memory usage at Done fill missing SEDs: 14952 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at FitCycle Post Bright-Obs: 14952 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Color cuts (before): 14952 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Applying color cut: 0.000 < g-i < 3.500
+lsst.fgcmFitCycle INFO: Flag 84 stars of 6889 with BAD_COLOR
+lsst.fgcmFitCycle INFO: Applying reference star color cut: 0.400 < g-i < 1.000
+lsst.fgcmFitCycle INFO: Flag 6077 stars with REFSTAR_BAD_COLOR (ref colors)
+lsst.fgcmFitCycle INFO: Flag 2259 stars with REFSTAR_BAD_COLOR (std colors)
+lsst.fgcmFitCycle INFO: Memory usage at Color cuts (after): 14952 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Exp gray (before): 14952 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: ExpGray for initial selection computed for 1091 exposures.
+lsst.fgcmFitCycle INFO: Computed ExpGray for initial selection in 0.24 seconds.
+lsst.fgcmFitCycle INFO: Memory usage at Exp gray (after): 14901 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Select good exps (before): 14901 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Flagged 126 bad exposures with bad fwhm.
+lsst.fgcmFitCycle INFO:  BAD_FWHM: u band: 14 of 115 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: g band: 39 of 211 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: r band: 23 of 177 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: i band: 24 of 295 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: z band: 26 of 199 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: y band: 0 of 104 exposures
+lsst.fgcmFitCycle INFO: Flagged 49 bad exposures with too few stars
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: u band: 9 of 115 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: g band: 17 of 211 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: r band: 1 of 177 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: i band: 20 of 295 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: z band: 2 of 199 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: y band: 0 of 104 exposures
+lsst.fgcmFitCycle INFO: Flagged 190 bad exposures with EXP_GRAY (initial) too large.
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: u band: 23 of 115 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: g band: 45 of 211 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: r band: 57 of 177 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: i band: 32 of 295 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: z band: 23 of 199 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: y band: 10 of 104 exposures
+lsst.fgcmFitCycle INFO: There are now 824 of 1101 exposures that are potentially "photometric"
+lsst.fgcmFitCycle INFO: Memory usage at Select good exps (after): 14901 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Select good stars (before): 14901 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Flagging 483 of 6889 stars with TOO_FEW_OBS
+lsst.fgcmFitCycle INFO: Memory usage at Select good stars (after): 14941 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Abs (before): 14941 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Initial abs throughput in u band = 0.9088
+lsst.fgcmFitCycle INFO: Initial abs throughput in g band = 0.9539
+lsst.fgcmFitCycle INFO: Initial abs throughput in r band = 0.9964
+lsst.fgcmFitCycle INFO: Initial abs throughput in i band = 1.0093
+lsst.fgcmFitCycle INFO: Initial abs throughput in z band = 1.0506
+lsst.fgcmFitCycle INFO: Initial abs throughput in y band = 1.0822
+lsst.fgcmFitCycle INFO: Memory usage at Abs (after): 14951 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at QE slope (before): 14951 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Wash interval 0, computed qe slope in all bands: 0.000000 +/- 0.000094 mmag/day
+lsst.fgcmFitCycle INFO: Memory usage at QE slope (after): 14901 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Configured to precompute superstar flat on initial cycle
+lsst.fgcmFitCycle INFO: Memory usage at Outliers (before): 14901 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Marked 20092 observations (2.0060%) as SUPERSTAR_OUTLIER
+lsst.fgcmFitCycle INFO: Flagging 505 of 6889 stars with TOO_FEW_OBS
+lsst.fgcmFitCycle INFO: Memory usage at Outliers (after): 14915 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Superstar (before): 14915 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Marked 3906 observations (0.3980%) as SUPERSTAR_OUTLIER
+lsst.fgcmFitCycle INFO: Flagging 510 of 6889 stars with TOO_FEW_OBS
+lsst.fgcmFitCycle INFO: Superstar epoch 0 filter u_24: 0.00 +/- 2232743.00  Delta: -0.00 +/- 2232743.00 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 0 filter g_6: 0.00 +/- 10.93  Delta: 0.00 +/- 10.93 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 0 filter r_57: 0.00 +/- 12.26  Delta: 0.00 +/- 12.26 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 0 filter i_39: 0.00 +/- 10.54  Delta: -0.00 +/- 10.54 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 0 filter z_20: 0.00 +/- 17.79  Delta: 0.00 +/- 17.79 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 1 filter u_24: 0.00 +/- 31.79  Delta: 0.00 +/- 31.79 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 1 filter g_6: 0.00 +/- 32.54  Delta: -0.00 +/- 32.54 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 1 filter r_57: 0.00 +/- 17.71  Delta: 0.00 +/- 17.71 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 1 filter i_39: 0.00 +/- 819128.82  Delta: 0.00 +/- 819128.82 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 1 filter z_20: 0.00 +/- 40.67  Delta: 0.00 +/- 40.67 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 1 filter y_10: 0.00 +/- 816387.85  Delta: -0.00 +/- 816387.85 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 2 filter u_24: 0.00 +/- 1413775.66  Delta: -0.00 +/- 1413775.66 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 2 filter g_6: 0.00 +/- 30.35  Delta: -0.00 +/- 30.35 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 2 filter r_57: 0.00 +/- 1360447.98  Delta: 0.00 +/- 1360447.98 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 2 filter i_39: 0.00 +/- 54.79  Delta: -0.00 +/- 54.79 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 2 filter z_20: 0.00 +/- 17.27  Delta: 0.00 +/- 17.27 mmag
+lsst.fgcmFitCycle INFO: Superstar epoch 2 filter y_10: 0.00 +/- 53.17  Delta: -0.00 +/- 53.17 mmag
+lsst.fgcmFitCycle INFO: Computed SuperStarFlats in 0.75 seconds.
+lsst.fgcmFitCycle INFO: Memory usage at Superstar (after): 14910 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Superstar apply (before): 14910 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Superstar apply (after): 14920 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Model mag errors (before): 14920 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Computing magnitude error model parameters...
+lsst.fgcmFitCycle INFO: Memory usage at Model mag errors (after): 14915 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Number of good exposures: 824
+lsst.fgcmFitCycle INFO: Flagging exposures on 17 bad nights with too few photometric exposures.
+lsst.fgcmFitCycle INFO: Flagged 208 exposures on bad nights.
+lsst.fgcmFitCycle INFO:  TOO_FEW_EXP_ON_NIGHT: u band: 26 of 115 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_EXP_ON_NIGHT: g band: 48 of 211 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_EXP_ON_NIGHT: r band: 52 of 177 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_EXP_ON_NIGHT: i band: 42 of 295 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_EXP_ON_NIGHT: z band: 32 of 199 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_EXP_ON_NIGHT: y band: 8 of 104 exposures
+lsst.fgcmFitCycle INFO: Flagging 550 of 6889 stars with TOO_FEW_OBS
+lsst.fgcmFitCycle INFO: Marked 19304 observations (1.9735%) as SUPERSTAR_OUTLIER
+lsst.fgcmFitCycle INFO: Flagging 522 of 6889 stars with TOO_FEW_OBS
+lsst.fgcmFitCycle INFO: Memory usage at Step units (before): 14915 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Found 5645 good stars for step units
+lsst.fgcmFitCycle INFO: Step size computation took 2.22 seconds.
+lsst.fgcmFitCycle INFO: Memory usage at Step units (after): 15042 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Resetting atmosphere parameters prior to fit.
+lsst.fgcmFitCycle INFO: Memory usage at FitCycle Pre-Fit: 15042 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Performing fit with 100 iterations.
+lsst.fgcmFitCycle INFO: Found 5645 good stars for chisq
+lsst.fgcmFitCycle INFO: Actually fit 1 parameters.
+lsst.fgcmFitCycle INFO: Chisq/dof = 5526.760555 (1 iterations)
+lsst.fgcmFitCycle INFO: Chisq computation took 2.19 seconds.
+lsst.fgcmFitCycle INFO: Memory usage at end of chisq: 15042 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Fit completed.  Final chi^2/DOF = 5526.760555
+lsst.fgcmFitCycle INFO: Memory usage at FitCycle Post-Fit: 15042 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Chisq/dof = 5542.961185 (2 iterations)
+lsst.fgcmFitCycle INFO: Chisq computation took 2.14 seconds.
+lsst.fgcmFitCycle INFO: Memory usage at end of chisq: 14933 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Final abs throughput in u band = 0.4952
+lsst.fgcmFitCycle INFO: Final abs throughput in g band = 0.9498
+lsst.fgcmFitCycle INFO: Final abs throughput in r band = 0.8922
+lsst.fgcmFitCycle INFO: Final abs throughput in i band = 0.3718
+lsst.fgcmFitCycle INFO: Final abs throughput in z band = 1.0316
+lsst.fgcmFitCycle INFO: Final abs throughput in y band = 0.9584
+lsst.fgcmFitCycle INFO: Chisq computation took 1.19 seconds.
+lsst.fgcmFitCycle INFO: Memory usage at end of chisq: 14934 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at After recomputing chisq for all exposures: 14934 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Marked 74426 observations (6.4439%) as FOCALPLANE_OUTLIER
+lsst.fgcmFitCycle INFO: Flagging 821 of 6889 stars with TOO_FEW_OBS
+lsst.fgcmFitCycle INFO: Marked 26317 observations (2.4382%) as FOCALPLANE_OUTLIER_REF
+lsst.fgcmFitCycle INFO: Flagging 863 of 6889 stars with TOO_FEW_OBS
+lsst.fgcmFitCycle INFO: Memory usage at Before ccdgray and expgray: 14894 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Computing CCDGray and ExpGray.
+lsst.fgcmFitCycle INFO: Computing CCDGray sub-ccd fits (no focal plane).
+lsst.fgcmFitCycle INFO: ExpGray computed for 1064 exposures.
+lsst.fgcmFitCycle INFO: Computed CCDGray and ExpGray in 3.10 seconds.
+lsst.fgcmFitCycle INFO: sigExpGray (u) = 1159.33 mmag
+lsst.fgcmFitCycle INFO: sigExpGray (g) = 21.96 mmag
+lsst.fgcmFitCycle INFO: sigExpGray (r) = 1167.83 mmag
+lsst.fgcmFitCycle INFO: sigExpGray (i) = 1062.82 mmag
+lsst.fgcmFitCycle INFO: sigExpGray (z) = 25.55 mmag
+lsst.fgcmFitCycle INFO: sigExpGray (y) = 1145.53 mmag
+lsst.fgcmFitCycle INFO: Could not find any matched exposures between bands g and r within 10.00 minutes
+lsst.fgcmFitCycle INFO: Could not find any matched exposures between bands r and i within 10.00 minutes
+lsst.fgcmFitCycle INFO: Could not find any matched exposures between bands i and z within 10.00 minutes
+lsst.fgcmFitCycle INFO: Memory usage at After ccdgray and expgray: 14973 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: ExpGray cut (u band): -0.2000
+lsst.fgcmFitCycle INFO: ExpGray high cut (u band): 0.4000
+lsst.fgcmFitCycle INFO: ExpGray cut (g band): -0.0575
+lsst.fgcmFitCycle INFO: ExpGray high cut (g band): 0.1425
+lsst.fgcmFitCycle INFO: ExpGray cut (r band): -0.1000
+lsst.fgcmFitCycle INFO: ExpGray high cut (r band): 0.4000
+lsst.fgcmFitCycle INFO: ExpGray cut (i band): -0.1000
+lsst.fgcmFitCycle INFO: ExpGray high cut (i band): 0.4000
+lsst.fgcmFitCycle INFO: ExpGray cut (z band): -0.0825
+lsst.fgcmFitCycle INFO: ExpGray high cut (z band): 0.1500
+lsst.fgcmFitCycle INFO: ExpGray cut (y band): -0.1000
+lsst.fgcmFitCycle INFO: ExpGray high cut (y band): 0.4000
+lsst.fgcmFitCycle INFO: Memory usage at After computing CCD and Exp Gray: 14973 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Before Delta Aper: 14973 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Computing deltaAper offset per exposure
+lsst.fgcmFitCycle INFO: Compute per-star deltaAper
+lsst.fgcmFitCycle INFO: Running DeltaAper on 1 cores
+lsst.fgcmFitCycle INFO: Finished DeltaAper in 0.13 seconds.
+lsst.fgcmFitCycle INFO: Global background offset in u band: -9999.00000 nJy/arcsec2
+lsst.fgcmFitCycle INFO: Global background offset in g band: -3.79475 nJy/arcsec2
+lsst.fgcmFitCycle INFO: Global background offset in r band: -3.94360 nJy/arcsec2
+lsst.fgcmFitCycle INFO: Global background offset in i band: -23.72154 nJy/arcsec2
+lsst.fgcmFitCycle INFO: Global background offset in z band: -59.96080 nJy/arcsec2
+lsst.fgcmFitCycle INFO: Global background offset in y band: -41.67784 nJy/arcsec2
+lsst.fgcmFitCycle INFO: Computing delta-aper epsilon spatial map at nside 32
+py.warnings WARNING: /cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+
+py.warnings WARNING: /cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+
+lsst.fgcmFitCycle INFO: Memory usage at After Delta Aper: 14986 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at Before sig fgcm: 14986 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: fit sigFgcm (u) (All) = 27.87 mmag
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in u band (color cut 1).
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in u band (color cut 2).
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in u band (color cut 3).
+lsst.fgcmFitCycle INFO: fit sigFgcm (g) (All) = 24.53 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (g) (Blue25) = 23.44 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (g) (Middle50) = 19.37 mmag
+lsst.fgcmFitCycle INFO: Typical error is larger than width (g) (Red25).  Setting to 0.001
+lsst.fgcmFitCycle INFO: fit sigFgcm (g) (Red25) = 1.00 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (r) (All) = 41.14 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (r) (Blue25) = 32.64 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (r) (Middle50) = 29.19 mmag
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in r band (color cut 3).
+lsst.fgcmFitCycle INFO: fit sigFgcm (i) (All) = 26.87 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (i) (Blue25) = 26.66 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (i) (Middle50) = 8.96 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (i) (Red25) = 18.43 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (z) (All) = 25.57 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (z) (Blue25) = 25.58 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (z) (Middle50) = 25.66 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (z) (Red25) = 28.78 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (y) (All) = 46.36 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (y) (Blue25) = 57.66 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (y) (Middle50) = 41.30 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcm (y) (Red25) = 11.90 mmag
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (u) (All) = 6.80
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in u band (color cut 1).
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in u band (color cut 2).
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in u band (color cut 3).
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (g) (All) = 6.00
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (g) (Blue25) = 5.84
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (g) (Middle50) = 4.66
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (g) (Red25) = 1.00
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (r) (All) = 6.26
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (r) (Blue25) = 6.27
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (r) (Middle50) = 6.05
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in r band (color cut 3).
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (i) (All) = 14.83
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (i) (Blue25) = 6.45
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (i) (Middle50) = 9.75
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (i) (Red25) = 2.07
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (z) (All) = 6.50
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (z) (Blue25) = 6.65
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (z) (Middle50) = 6.32
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (z) (Red25) = 6.21
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (y) (All) = 8.79
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (y) (Blue25) = 8.44
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (y) (Middle50) = 8.37
+lsst.fgcmFitCycle INFO: fit sigFgcmPull (y) (Red25) = 2.79
+lsst.fgcmFitCycle INFO: Done computing sigFgcm in 0.90 sec.
+lsst.fgcmFitCycle INFO: reserved sigFgcm (u) (All) = 29.07 mmag
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in u band (color cut 1).
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in u band (color cut 2).
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in u band (color cut 3).
+lsst.fgcmFitCycle INFO: reserved sigFgcm (g) (All) = 27.64 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (g) (Blue25) = 25.90 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (g) (Middle50) = 24.35 mmag
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in g band (color cut 3).
+lsst.fgcmFitCycle INFO: reserved sigFgcm (r) (All) = 30.94 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (r) (Blue25) = 22.72 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (r) (Middle50) = 32.00 mmag
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in r band (color cut 3).
+lsst.fgcmFitCycle INFO: reserved sigFgcm (i) (All) = 24.35 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (i) (Blue25) = 26.66 mmag
+lsst.fgcmFitCycle INFO: Typical error is larger than width (i) (Middle50).  Setting to 0.001
+lsst.fgcmFitCycle INFO: reserved sigFgcm (i) (Middle50) = 1.00 mmag
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in i band (color cut 3).
+lsst.fgcmFitCycle INFO: reserved sigFgcm (z) (All) = 24.79 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (z) (Blue25) = 24.37 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (z) (Middle50) = 25.31 mmag
+lsst.fgcmFitCycle INFO: Typical error is larger than width (z) (Red25).  Setting to 0.001
+lsst.fgcmFitCycle INFO: reserved sigFgcm (z) (Red25) = 1.00 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (y) (All) = 36.01 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (y) (Blue25) = 39.64 mmag
+lsst.fgcmFitCycle INFO: reserved sigFgcm (y) (Middle50) = 40.64 mmag
+lsst.fgcmFitCycle INFO: sigFGCM: No good observations in y band (color cut 3).
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (u) (All) = 6.67
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in u band (color cut 1).
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in u band (color cut 2).
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in u band (color cut 3).
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (g) (All) = 6.92
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (g) (Blue25) = 6.48
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (g) (Middle50) = 5.98
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in g band (color cut 3).
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (r) (All) = 6.94
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (r) (Blue25) = 5.67
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (r) (Middle50) = 8.79
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in r band (color cut 3).
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (i) (All) = 9.59
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (i) (Blue25) = 6.45
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (i) (Middle50) = 1.00
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in i band (color cut 3).
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (z) (All) = 6.47
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (z) (Blue25) = 6.69
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (z) (Middle50) = 6.33
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (z) (Red25) = 1.00
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (y) (All) = 8.60
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (y) (Blue25) = 13.01
+lsst.fgcmFitCycle INFO: reserved sigFgcmPull (y) (Middle50) = 7.51
+lsst.fgcmFitCycle INFO: sigFGCMPulls: No good observations in y band (color cut 3).
+lsst.fgcmFitCycle INFO: Done computing sigFgcm in 0.30 sec.
+lsst.fgcmFitCycle INFO: Memory usage at After sig fgcm: 14993 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Memory usage at After computing sigFGCM: 14993 MB current; 30386 MB peak.
+lsst.fgcmFitCycle INFO: Flagged 126 bad exposures with bad fwhm.
+lsst.fgcmFitCycle INFO:  BAD_FWHM: u band: 14 of 115 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: g band: 39 of 211 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: r band: 23 of 177 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: i band: 24 of 295 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: z band: 26 of 199 exposures
+lsst.fgcmFitCycle INFO:  BAD_FWHM: y band: 0 of 104 exposures
+lsst.fgcmFitCycle INFO: Flagged 23 bad exposures with no stars
+lsst.fgcmFitCycle INFO:  NO_STARS: u band: 3 of 115 exposures
+lsst.fgcmFitCycle INFO:  NO_STARS: g band: 8 of 211 exposures
+lsst.fgcmFitCycle INFO:  NO_STARS: r band: 0 of 177 exposures
+lsst.fgcmFitCycle INFO:  NO_STARS: i band: 11 of 295 exposures
+lsst.fgcmFitCycle INFO:  NO_STARS: z band: 1 of 199 exposures
+lsst.fgcmFitCycle INFO:  NO_STARS: y band: 0 of 104 exposures
+lsst.fgcmFitCycle INFO: Flagged 32 bad exposures with too few stars.
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: u band: 7 of 115 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: g band: 9 of 211 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: r band: 4 of 177 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: i band: 11 of 295 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: z band: 1 of 199 exposures
+lsst.fgcmFitCycle INFO:  TOO_FEW_STARS: y band: 0 of 104 exposures
+lsst.fgcmFitCycle INFO: Flagged 529 bad exposures with EXP_GRAY too negative.
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: u band: 80 of 115 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: g band: 68 of 211 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: r band: 93 of 177 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: i band: 199 of 295 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: z band: 42 of 199 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_NEGATIVE: y band: 47 of 104 exposures
+lsst.fgcmFitCycle INFO: Flagged 117 bad exposures with EXP_GRAY too positive.
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_POSITIVE: u band: 32 of 115 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_POSITIVE: g band: 0 of 211 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_POSITIVE: r band: 0 of 177 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_POSITIVE: i band: 85 of 295 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_POSITIVE: z band: 0 of 199 exposures
+lsst.fgcmFitCycle INFO:  EXP_GRAY_TOO_POSITIVE: y band: 0 of 104 exposures
+lsst.fgcmFitCycle INFO: Flagged 11 bad exposures with VAR_GRAY too large.
+lsst.fgcmFitCycle INFO:  VAR_GRAY_TOO_LARGE: u band: 0 of 115 exposures
+lsst.fgcmFitCycle INFO:  VAR_GRAY_TOO_LARGE: g band: 0 of 211 exposures
+lsst.fgcmFitCycle INFO:  VAR_GRAY_TOO_LARGE: r band: 3 of 177 exposures
+lsst.fgcmFitCycle INFO:  VAR_GRAY_TOO_LARGE: i band: 8 of 295 exposures
+lsst.fgcmFitCycle INFO:  VAR_GRAY_TOO_LARGE: z band: 0 of 199 exposures
+lsst.fgcmFitCycle INFO:  VAR_GRAY_TOO_LARGE: y band: 0 of 104 exposures
+lsst.fgcmFitCycle INFO: fgcm exposure diagnostics (cycle 0):
+lsst.fgcmFitCycle INFO:   band u: 115 of 115 exposures flagged <-- ALL CUT; flags {'TOO_FEW_STARS': 7, 'EXP_GRAY_TOO_NEGATIVE': 80, 'NO_STARS': 3, 'EXP_GRAY_TOO_POSITIVE': 32, 'BAD_FWHM': 14}; ExpGray p5/p25/p50/p75/p95 = -2.853 -1.516 -1.401 +0.874 +1.035
+lsst.fgcmFitCycle INFO:   band g: 82 of 211 exposures flagged; flags {'TOO_FEW_STARS': 9, 'EXP_GRAY_TOO_NEGATIVE': 68, 'NO_STARS': 8, 'BAD_FWHM': 39}; ExpGray p5/p25/p50/p75/p95 = -3.327 -0.132 -0.011 +0.014 +0.033
+lsst.fgcmFitCycle INFO:   band r: 107 of 177 exposures flagged; flags {'TOO_FEW_STARS': 4, 'EXP_GRAY_TOO_NEGATIVE': 93, 'VAR_GRAY_TOO_LARGE': 3, 'BAD_FWHM': 23}; ExpGray p5/p25/p50/p75/p95 = -3.280 -2.292 -0.103 +0.108 +0.147
+lsst.fgcmFitCycle INFO:   band i: 295 of 295 exposures flagged <-- ALL CUT; flags {'TOO_FEW_STARS': 11, 'EXP_GRAY_TOO_NEGATIVE': 199, 'VAR_GRAY_TOO_LARGE': 8, 'NO_STARS': 11, 'EXP_GRAY_TOO_POSITIVE': 85, 'BAD_FWHM': 24}; ExpGray p5/p25/p50/p75/p95 = -2.565 -1.690 -1.328 +0.650 +0.936
+lsst.fgcmFitCycle INFO:   band z: 48 of 199 exposures flagged; flags {'TOO_FEW_STARS': 1, 'EXP_GRAY_TOO_NEGATIVE': 42, 'NO_STARS': 1, 'BAD_FWHM': 26}; ExpGray p5/p25/p50/p75/p95 = -0.278 -0.043 -0.010 +0.013 +0.077
+lsst.fgcmFitCycle INFO:   band y: 47 of 104 exposures flagged; flags {'EXP_GRAY_TOO_NEGATIVE': 47}; ExpGray p5/p25/p50/p75/p95 = -2.695 -2.284 -0.003 +0.087 +0.149
+lsst.fgcmFitCycle INFO: fgcm exposure diagnostics saved to data_01_DDFELAISS1_runfgcmFitCycle/fgcm_exposure_diagnostics_cycle0.csv
+lsst.pipe.base.single_quantum_executor ERROR: Execution of task 'fgcmFitCycle' on quantum {instrument: 'LSSTCam'} failed. Exception RuntimeError: FATAL: All observations in band(s) u, i have been cut! (see the fgcm exposure diagnostics logged just above)
+lsst.pipe.base.mp_graph_executor ERROR: 01a1d45d-231c-7034-b409-01a1fc7adb17 (fgcmFitCycle@{instrument: 'LSSTCam'}) failed; processing will continue for remaining tasks.
+Traceback (most recent call last):
+  File "/pbs/home/d/dagoret/rubin_user/REPO/fgcmcal/python/lsst/fgcmcal/fgcmFitCycle.py", line 1871, in _fgcmFitCycle
+    fgcmFitCycle.run()
+    ~~~~~~~~~~~~~~~~^^
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/fgcm/g17573debd1/lib/python/fgcm/fgcmFitCycle.py", line 650, in run
+    self.expSelector.selectGoodExposures()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/fgcm/g17573debd1/lib/python/fgcm/fgcmExposureSelector.py", line 87, in selectGoodExposures
+    checkFlaggedExposuresPerBand(self.fgcmLog, self.fgcmPars)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/fgcm/g17573debd1/lib/python/fgcm/fgcmUtilities.py", line 785, in checkFlaggedExposuresPerBand
+    raise RuntimeError("FATAL: All observations in %s band have been cut!")
+RuntimeError: FATAL: All observations in %s band have been cut!
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/g483a95da16+73ccce76dc/python/lsst/pipe/base/mp_graph_executor.py", line 659, in _execute_quanta_in_process
+    execution_result = self._quantum_executor.execute(
+        task_node, quantum, quantum_id=quantum_id, log_records=task_logs
+    )
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/g483a95da16+73ccce76dc/python/lsst/pipe/base/single_quantum_executor.py", line 179, in execute
+    return self._execute(task_node, quantum, quantum_id=quantum_id, log_records=log_records)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/g483a95da16+73ccce76dc/python/lsst/pipe/base/single_quantum_executor.py", line 209, in _execute
+    return self._execute_with_limited_butler(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        task_node, limited_butler, quantum=quantum, quantum_id=quantum_id, log_records=log_records
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/g483a95da16+73ccce76dc/python/lsst/pipe/base/single_quantum_executor.py", line 312, in _execute_with_limited_butler
+    caveats = self._run_quantum(
+        task, quantum, task_node, limited_butler, quantum_id=quantum_id, ids_put=outputs_put
+    )
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/g483a95da16+73ccce76dc/python/lsst/pipe/base/single_quantum_executor.py", line 596, in _run_quantum
+    task.runQuantum(butlerQC, inputRefs, outputRefs)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pbs/home/d/dagoret/rubin_user/REPO/fgcmcal/python/lsst/fgcmcal/fgcmFitCycle.py", line 1343, in runQuantum
+    fgcmDatasetDict, config, fgcmMultiCycleObjects = self._fgcmFitCycle(
+                                                     ~~~~~~~~~~~~~~~~~~^
+        camera,
+        ^^^^^^^
+    ...<5 lines>...
+        fgcmMultiCycleObjects=fgcmMultiCycleObjects,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/pbs/home/d/dagoret/rubin_user/REPO/fgcmcal/python/lsst/fgcmcal/fgcmFitCycle.py", line 1878, in _fgcmFitCycle
+    raise RuntimeError(
+    ...<2 lines>...
+    ) from err
+RuntimeError: FATAL: All observations in band(s) u, i have been cut! (see the fgcm exposure diagnostics logged just above)
+lsst.pipe.base.mp_graph_executor ERROR: Upstream job failed for task 01a1d45d-2320-7a7a-8f10-f3594941a07f (fgcmOutputProducts@{instrument: 'LSSTCam'}), skipping this quantum.
+lsst.pipe.base.mp_graph_executor INFO: Executed 1 quanta successfully, 2 failed and 0 remain out of total 3 quanta.
+lsst.daf.butler.cli.utils ERROR: Caught an exception, details are in traceback:
+Traceback (most recent call last):
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/ctrl_mpexec/gb0c5730fce+0a9054c759/python/lsst/ctrl/mpexec/cli/cmd/commands.py", line 222, in run
+    script.run(qgraph, **kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/ctrl_mpexec/gb0c5730fce+0a9054c759/python/lsst/ctrl/mpexec/cli/script/run.py", line 307, in run
+    executor.execute(qg)
+    ~~~~~~~~~~~~~~~~^^^^
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/g483a95da16+73ccce76dc/python/lsst/pipe/base/mp_graph_executor.py", line 573, in execute
+    raise err
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/g483a95da16+73ccce76dc/python/lsst/pipe/base/mp_graph_executor.py", line 558, in execute
+    self._execute_quanta_in_process(xgraph, self._report, provenance_writer)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_46/conda/envs/lsst-scipipe-14.0.0-exact/share/eups/Linux64/pipe_base/g483a95da16+73ccce76dc/python/lsst/pipe/base/mp_graph_executor.py", line 767, in _execute_quanta_in_process
+    raise MPGraphExecutorError("One or more tasks failed during execution.")
+lsst.pipe.base.mp_graph_executor.MPGraphExecutorError: One or more tasks failed during execution.
