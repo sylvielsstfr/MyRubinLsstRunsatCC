@@ -11,8 +11,8 @@ echo $CCDIDS
 echo "Init Tract"
 echo $TRACTIDS
 
-echo "Init PATCHES"
-echo $PATCHIDS
+echo "Prepare to run RUBIN-LSST STAGE1/step1d pipeline on some tract and patches belonging to DDF COSMOS"
+
 
 echo "init rubin-lsst setup"
 #source /cvmfs/sw.lsst.eu/almalinux-x86_64/lsst_distrib/w_2026_40/loadLSST.sh

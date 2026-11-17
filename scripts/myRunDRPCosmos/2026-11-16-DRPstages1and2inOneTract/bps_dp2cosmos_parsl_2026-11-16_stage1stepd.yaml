@@ -76,7 +76,7 @@ numberOfRetries: 3
 
 pipetask:
   pipetaskInit:
-    requestMemory: 64_000
+    requestMemory: 1024_000
     numberOfRetries: 3
 
 extraRunQuantumOptions: "--no-raise-on-partial-outputs"
