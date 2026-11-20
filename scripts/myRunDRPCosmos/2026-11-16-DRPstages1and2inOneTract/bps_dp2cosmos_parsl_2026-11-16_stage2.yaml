@@ -65,7 +65,7 @@ payload:
   payloadName: dp2cosmos202611
   butlerConfig: main
   inCollection: u/${USER}/LSSTCam/runcosmos01_20261116_tract9813_RunCosmos9patches/stage1,LSSTCam/defaults
-  output: u/${USER}/LSSTCam/runcosmos01_20261116_tract9813_RunCosmos9patches/stage2_v2
+  output: u/${USER}/LSSTCam/runcosmos01_20261116_tract9813_RunCosmos9patches/stage2_v3
   dataQuery: "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract IN (${TRACTIDS}) AND detector IN (${CCDIDS}) AND exposure NOT IN (${NOVISITS}) AND exposure.observation_type='science'"
 
 numberOfRetries: 3
@@ -78,7 +78,7 @@ extraQgraphOptions: "-c fgcmFitCycle:minStarPerExp=100"
 
 pipetask:
   pipetaskInit:
-    requestMemory: 64_000
+    requestMemory: 128_000
     numberOfRetries: 3
 
 extraRunQuantumOptions: "--no-raise-on-partial-outputs"
